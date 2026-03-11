@@ -35555,9 +35555,11 @@ const Tip = ({ active, payload, label }) => {
 // ───── TAB 1: OVERVIEW ─────
 function OverviewTab() {
   const yd = AGG.year_data; // now includes 2025
-  const growthData = yd
-    .slice(1)
-    .map((d) => ({ year: String(d.year), growth: d.growth, n: d.n }));
+  const growthData = yd.map((d) => ({
+    year: String(d.year),
+    growth: d.growth,
+    n: d.n,
+  }));
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
       <div style={{ display: "flex", gap: 16 }}>
@@ -35662,7 +35664,7 @@ function OverviewTab() {
         >
           <SectionTitle
             title="Year-on-Year ESG Growth"
-            sub="% growth vs prior year"
+            sub="% growth vs prior year (2022 = baseline)"
           />
           <ResponsiveContainer width="100%" height={260}>
             <BarChart data={growthData} barSize={44}>
