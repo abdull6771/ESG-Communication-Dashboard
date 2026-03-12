@@ -24280,15 +24280,6 @@ const AGG = {
   ],
   mkt_data: [
     {
-      market: "ACE",
-      n: 234,
-      firms: 78,
-      esg_com: 22.143,
-      env_com: 5.274,
-      soc_com: 5.295,
-      gov_com: 11.574,
-    },
-    {
       market: "MAIN",
       n: 1629,
       firms: 543,
@@ -24297,46 +24288,55 @@ const AGG = {
       soc_com: 7.402,
       gov_com: 10.891,
     },
+    {
+      market: "ACE",
+      n: 234,
+      firms: 78,
+      esg_com: 22.143,
+      env_com: 5.274,
+      soc_com: 5.295,
+      gov_com: 11.574,
+    },
   ],
   mkt_yr: [
     {
       year: 2022,
-      ACE_esg: 18.262,
-      ACE_env: 3.745,
-      ACE_soc: 3.979,
-      ACE_gov: 10.538,
-      ACE_n: 78,
       MAIN_esg: 22.595,
       MAIN_env: 6.373,
       MAIN_soc: 5.978,
       MAIN_gov: 10.243,
       MAIN_n: 543,
+      ACE_esg: 18.262,
+      ACE_env: 3.745,
+      ACE_soc: 3.979,
+      ACE_gov: 10.538,
+      ACE_n: 78,
     },
     {
       year: 2023,
-      ACE_esg: 22.014,
-      ACE_env: 5.221,
-      ACE_soc: 5.149,
-      ACE_gov: 11.644,
-      ACE_n: 78,
       MAIN_esg: 26.552,
       MAIN_env: 8.22,
       MAIN_soc: 7.471,
       MAIN_gov: 10.861,
       MAIN_n: 543,
+      ACE_esg: 22.014,
+      ACE_env: 5.221,
+      ACE_soc: 5.149,
+      ACE_gov: 11.644,
+      ACE_n: 78,
     },
     {
       year: 2024,
-      ACE_esg: 26.151,
-      ACE_env: 6.858,
-      ACE_soc: 6.755,
-      ACE_gov: 12.538,
-      ACE_n: 78,
       MAIN_esg: 30.529,
       MAIN_env: 10.205,
       MAIN_soc: 8.756,
       MAIN_gov: 11.568,
       MAIN_n: 543,
+      ACE_esg: 26.151,
+      ACE_env: 6.858,
+      ACE_soc: 6.755,
+      ACE_gov: 12.538,
+      ACE_n: 78,
     },
   ],
   sec_data: [
@@ -37647,105 +37647,105 @@ const EX = {
   mkt_yr_trend: [
     {
       year: 2022,
-      ACE_esg: 18.262,
-      ACE_env: 3.745,
-      ACE_soc: 3.979,
-      ACE_gov: 10.538,
-      ACE_n: 78,
       MAIN_esg: 22.595,
       MAIN_env: 6.373,
       MAIN_soc: 5.978,
       MAIN_gov: 10.243,
       MAIN_n: 543,
+      ACE_esg: 18.262,
+      ACE_env: 3.745,
+      ACE_soc: 3.979,
+      ACE_gov: 10.538,
+      ACE_n: 78,
     },
     {
       year: 2023,
-      ACE_esg: 22.014,
-      ACE_env: 5.221,
-      ACE_soc: 5.149,
-      ACE_gov: 11.644,
-      ACE_n: 78,
       MAIN_esg: 26.552,
       MAIN_env: 8.22,
       MAIN_soc: 7.471,
       MAIN_gov: 10.861,
       MAIN_n: 543,
+      ACE_esg: 22.014,
+      ACE_env: 5.221,
+      ACE_soc: 5.149,
+      ACE_gov: 11.644,
+      ACE_n: 78,
     },
     {
       year: 2024,
-      ACE_esg: 26.151,
-      ACE_env: 6.858,
-      ACE_soc: 6.755,
-      ACE_gov: 12.538,
-      ACE_n: 78,
       MAIN_esg: 30.529,
       MAIN_env: 10.205,
       MAIN_soc: 8.756,
       MAIN_gov: 11.568,
       MAIN_n: 543,
+      ACE_esg: 26.151,
+      ACE_env: 6.858,
+      ACE_soc: 6.755,
+      ACE_gov: 12.538,
+      ACE_n: 78,
     },
   ],
   sec_mkt_counts: [
     {
       sector: "CONSTRUCTION",
-      ACE: 8,
-      ACE_esg: 22.891,
       MAIN: 41,
       MAIN_esg: 25.39,
+      ACE: 8,
+      ACE_esg: 22.891,
     },
     {
       sector: "CONSUMER PRODUCTS AND SERVICES",
-      ACE: 8,
-      ACE_esg: 22.58,
       MAIN: 111,
       MAIN_esg: 25.548,
+      ACE: 8,
+      ACE_esg: 22.58,
     },
-    { sector: "ENERGY", ACE: 1, ACE_esg: 31.113, MAIN: 20, MAIN_esg: 32.0 },
+    { sector: "ENERGY", MAIN: 20, MAIN_esg: 32.0, ACE: 1, ACE_esg: 31.113 },
     {
       sector: "FINANCIAL SERVICES",
-      ACE: 0,
-      ACE_esg: 0,
       MAIN: 5,
       MAIN_esg: 29.637,
+      ACE: 0,
+      ACE_esg: 0,
     },
     {
       sector: "HEALTHCARE",
-      ACE: 2,
-      ACE_esg: 24.878,
       MAIN: 17,
       MAIN_esg: 29.682,
+      ACE: 2,
+      ACE_esg: 24.878,
     },
     {
       sector: "INDUSTRIAL PRODUCTS AND SERVICES",
-      ACE: 25,
-      ACE_esg: 23.488,
       MAIN: 165,
       MAIN_esg: 26.024,
+      ACE: 25,
+      ACE_esg: 23.488,
     },
-    { sector: "PLANTATION", ACE: 0, ACE_esg: 0, MAIN: 31, MAIN_esg: 29.011 },
-    { sector: "PROPERTY", ACE: 0, ACE_esg: 0, MAIN: 74, MAIN_esg: 25.397 },
+    { sector: "PLANTATION", MAIN: 31, MAIN_esg: 29.011, ACE: 0, ACE_esg: 0 },
+    { sector: "PROPERTY", MAIN: 74, MAIN_esg: 25.397, ACE: 0, ACE_esg: 0 },
     {
       sector: "TECHNOLOGY",
-      ACE: 25,
-      ACE_esg: 20.621,
       MAIN: 39,
       MAIN_esg: 27.009,
+      ACE: 25,
+      ACE_esg: 20.621,
     },
     {
       sector: "TELECOMMUNICATIONS AND MEDIA",
-      ACE: 6,
-      ACE_esg: 19.859,
       MAIN: 9,
       MAIN_esg: 27.023,
+      ACE: 6,
+      ACE_esg: 19.859,
     },
     {
       sector: "TRANSPORTATION AND LOGISTICS",
-      ACE: 2,
-      ACE_esg: 22.698,
       MAIN: 22,
       MAIN_esg: 26.818,
+      ACE: 2,
+      ACE_esg: 22.698,
     },
-    { sector: "UTILITIES", ACE: 1, ACE_esg: 15.2, MAIN: 9, MAIN_esg: 32.492 },
+    { sector: "UTILITIES", MAIN: 9, MAIN_esg: 32.492, ACE: 1, ACE_esg: 15.2 },
   ],
 };
 
@@ -37875,6 +37875,20 @@ const SecTitle = ({ title, sub, tag }) => (
 );
 const Tip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null;
+  // Sort: Main/Environmental before ACE/Social before Governance; keep other order stable
+  const order = {
+    "Main Market": 0,
+    Main: 0,
+    Environmental: 0,
+    "ESG Total": -1,
+    Social: 1,
+    Governance: 2,
+    "ACE Market": 3,
+    ACE: 3,
+  };
+  const sorted = [...payload].sort(
+    (a, b) => (order[a.name] ?? 99) - (order[b.name] ?? 99),
+  );
   return (
     <div
       style={{
@@ -37889,7 +37903,7 @@ const Tip = ({ active, payload, label }) => {
           {label}
         </div>
       )}
-      {payload.map((p, i) => (
+      {sorted.map((p, i) => (
         <div
           key={i}
           style={{
@@ -38351,14 +38365,14 @@ function PillarsTab() {
             sub="E → S → G sorted · All years side by side"
           />
           <ResponsiveContainer width="100%" height={230}>
-            <BarChart data={pillarCross} barGap={4}>
+            <LineChart data={pillarTrend}>
               <CartesianGrid
                 strokeDasharray="3 3"
                 stroke="#f1f5f9"
                 vertical={false}
               />
               <XAxis
-                dataKey="pillar"
+                dataKey="year"
                 tick={{ fill: "#475569", fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
@@ -38371,10 +38385,28 @@ function PillarsTab() {
               />
               <Tooltip content={<Tip />} />
               <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
-              <Bar dataKey="2022" fill="#94a3b8" radius={[3, 3, 0, 0]} />
-              <Bar dataKey="2023" fill="#475569" radius={[3, 3, 0, 0]} />
-              <Bar dataKey="2024" fill="#1e3a5f" radius={[3, 3, 0, 0]} />
-            </BarChart>
+              <Line
+                type="monotone"
+                dataKey="Environmental"
+                stroke={C.env}
+                strokeWidth={2.5}
+                dot={{ r: 5, fill: C.env, stroke: "#fff", strokeWidth: 2 }}
+              />
+              <Line
+                type="monotone"
+                dataKey="Social"
+                stroke={C.soc}
+                strokeWidth={2.5}
+                dot={{ r: 5, fill: C.soc, stroke: "#fff", strokeWidth: 2 }}
+              />
+              <Line
+                type="monotone"
+                dataKey="Governance"
+                stroke={C.gov}
+                strokeWidth={2.5}
+                dot={{ r: 5, fill: C.gov, stroke: "#fff", strokeWidth: 2 }}
+              />
+            </LineChart>
           </ResponsiveContainer>
         </Card>
         <Card>
@@ -38753,6 +38785,10 @@ function MarketTab() {
             <Tooltip
               content={({ active, payload, label }) => {
                 if (!active || !payload?.length) return null;
+                const sorted = [...payload].sort((a, b) => {
+                  const o = { "Main Market": 0, "ACE Market": 1 };
+                  return (o[a.name] ?? 99) - (o[b.name] ?? 99);
+                });
                 return (
                   <div
                     style={{
@@ -38770,7 +38806,7 @@ function MarketTab() {
                     >
                       {label}
                     </div>
-                    {payload.map((p, i) => (
+                    {sorted.map((p, i) => (
                       <div key={i} style={{ color: p.color, fontSize: 11 }}>
                         {p.name}: {p.value} firms
                       </div>
@@ -39016,20 +39052,23 @@ function SectorsTab() {
               </ScatterChart>
             </ResponsiveContainer>
             {[
-              ["Leaders", { top: 22, right: 60 }],
-              ["Mature", { bottom: 40, right: 60 }],
-              ["Catching-up", { top: 22, left: 60 }],
-              ["Laggards", { bottom: 40, left: 60 }],
+              ["Leaders", { top: 24, right: 26 }],
+              ["Mature", { bottom: 250, right: 26 }],
+              ["Catching-up", { top: 24, left: 50 }],
+              ["Laggards", { bottom: 250, left: 50 }],
             ].map(([lbl, pos]) => (
               <div
                 key={lbl}
                 style={{
                   position: "absolute",
                   ...pos,
-                  color: "#94a3b8",
-                  fontSize: 10,
-                  fontWeight: 700,
-                  opacity: 0.8,
+                  color: "#b0b8c4",
+                  fontSize: 11,
+                  fontWeight: 800,
+                  opacity: 0.6,
+                  letterSpacing: 1,
+                  textTransform: "uppercase",
+                  pointerEvents: "none",
                 }}
               >
                 {lbl}
@@ -39100,42 +39139,80 @@ function SectorsTab() {
           title="Multi-Sector ESG Communication Trend (2022–2024)"
           sub="Year-on-year trajectory per sector"
         />
-        <ResponsiveContainer width="100%" height={260}>
-          <LineChart data={[{ year: 2022 }, { year: 2023 }, { year: 2024 }]}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
-            <XAxis
-              dataKey="year"
-              tick={{ fill: "#475569", fontSize: 12 }}
-              axisLine={false}
-              tickLine={false}
-            />
-            <YAxis
-              domain={[15, 42]}
-              tick={{ fill: "#94a3b8", fontSize: 10 }}
-              axisLine={false}
-              tickLine={false}
-              tickFormatter={(v) => v + "%"}
-            />
-            <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize: 10, color: "#64748b" }} />
+        <div style={{ display: "flex", gap: 16 }}>
+          <div style={{ flex: 1 }}>
+            <ResponsiveContainer width="100%" height={260}>
+              <LineChart
+                data={[2022, 2023, 2024].map((yr) => {
+                  const row = { year: yr };
+                  sd.forEach((d) => {
+                    const key = SHORT[d.sector] || d.sector;
+                    row[key] = d["y" + yr];
+                  });
+                  return row;
+                })}
+              >
+                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <XAxis
+                  dataKey="year"
+                  tick={{ fill: "#475569", fontSize: 12 }}
+                  axisLine={false}
+                  tickLine={false}
+                />
+                <YAxis
+                  domain={[15, 42]}
+                  tick={{ fill: "#94a3b8", fontSize: 10 }}
+                  axisLine={false}
+                  tickLine={false}
+                  tickFormatter={(v) => v + "%"}
+                />
+                <Tooltip content={<Tip />} />
+                {sd.map((d, i) => (
+                  <Line
+                    key={d.sector}
+                    type="monotone"
+                    dataKey={SHORT[d.sector] || d.sector}
+                    name={SHORT[d.sector] || d.sector}
+                    stroke={C.sectors[i % C.sectors.length]}
+                    strokeWidth={1.5}
+                    dot={false}
+                  />
+                ))}
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 3,
+              justifyContent: "center",
+              minWidth: 130,
+            }}
+          >
             {sd.map((d, i) => (
-              <Line
+              <div
                 key={d.sector}
-                type="monotone"
-                data={[
-                  { year: 2022, v: d.y2022 },
-                  { year: 2023, v: d.y2023 },
-                  { year: 2024, v: d.y2024 },
-                ]}
-                dataKey="v"
-                name={SHORT[d.sector] || d.sector}
-                stroke={C.sectors[i % C.sectors.length]}
-                strokeWidth={1.5}
-                dot={false}
-              />
+                style={{ display: "flex", alignItems: "center", gap: 6 }}
+              >
+                <div
+                  style={{
+                    width: 10,
+                    height: 10,
+                    borderRadius: 2,
+                    background: C.sectors[i % C.sectors.length],
+                    flexShrink: 0,
+                  }}
+                />
+                <span
+                  style={{ color: "#475569", fontSize: 10, fontWeight: 600 }}
+                >
+                  {SHORT[d.sector] || d.sector}
+                </span>
+              </div>
             ))}
-          </LineChart>
-        </ResponsiveContainer>
+          </div>
+        </div>
       </Card>
 
       <Card>
@@ -39579,6 +39656,7 @@ function ExplorerTab() {
   const [quad, setQuad] = useState("ALL");
   const [sortBy, setSortBy] = useState("esg_com");
   const [search, setSearch] = useState("");
+  const [completeOnly, setCompleteOnly] = useState(true);
   const [page, setPage] = useState(0);
   const PER_PAGE = 20;
   const sectors = useMemo(
@@ -39592,9 +39670,23 @@ function ExplorerTab() {
     "Under-Communicators",
     "Low ESG Profile",
   ];
+  const completeCompanies = useMemo(() => {
+    const yearsByCompany = {};
+    RAW.forEach((r) => {
+      if (!yearsByCompany[r[1]]) yearsByCompany[r[1]] = new Set();
+      if (r[8] != null) yearsByCompany[r[1]].add(r[0]);
+    });
+    return new Set(
+      Object.entries(yearsByCompany)
+        .filter(([, yrs]) => yrs.size >= 3)
+        .map(([name]) => name),
+    );
+  }, []);
   const filtered = useMemo(
     () =>
       RAW.filter((r) => {
+        if (completeOnly && !completeCompanies.has(r[1])) return false;
+        if (completeOnly && r[8] == null) return false;
         if (year !== "ALL" && r[0] !== parseInt(year)) return false;
         if (sector !== "ALL" && r[2] !== sector) return false;
         if (market !== "ALL" && r[3] !== market) return false;
@@ -39603,7 +39695,7 @@ function ExplorerTab() {
           return false;
         return true;
       }),
-    [year, sector, market, quad, search],
+    [year, sector, market, quad, search, completeOnly, completeCompanies],
   );
   const sorted = useMemo(() => {
     const idx =
@@ -39736,6 +39828,40 @@ function ExplorerTab() {
         </div>
         <div
           style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 3,
+            alignSelf: "flex-end",
+          }}
+        >
+          <label
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              cursor: "pointer",
+              color: completeOnly ? "#34d399" : "#94a3b8",
+              fontSize: 11,
+              fontWeight: 600,
+              whiteSpace: "nowrap",
+              userSelect: "none",
+            }}
+            title="Show only companies with data in all 3 years (2022–2024)"
+          >
+            <input
+              type="checkbox"
+              checked={completeOnly}
+              onChange={(e) => {
+                setCompleteOnly(e.target.checked);
+                setPage(0);
+              }}
+              style={{ accentColor: "#0d9488", cursor: "pointer" }}
+            />
+            Complete Data Only
+          </label>
+        </div>
+        <div
+          style={{
             background: "#0d9488",
             borderRadius: 6,
             padding: "6px 16px",
@@ -39747,6 +39873,18 @@ function ExplorerTab() {
           }}
         >
           {sorted.length} records
+          {completeOnly && (
+            <span
+              style={{
+                fontWeight: 400,
+                fontSize: 10,
+                marginLeft: 6,
+                opacity: 0.85,
+              }}
+            >
+              ({completeCompanies.size} firms)
+            </span>
+          )}
         </div>
       </div>
       <div
