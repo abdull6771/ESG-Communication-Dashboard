@@ -41359,18 +41359,6 @@ export default function App() {
                 <div>
                   <div
                     style={{
-                      color: "#93c5fd",
-                      fontSize: 9,
-                      fontWeight: 700,
-                      letterSpacing: 2,
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    INCEIF University · Policy Report 2026 · Assoc. Prof. Dr.
-                    Kinan Salim & Annisa Fithria
-                  </div>
-                  <div
-                    style={{
                       color: "#fff",
                       fontSize: 20,
                       fontWeight: 700,
