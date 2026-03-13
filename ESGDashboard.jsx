@@ -37934,6 +37934,43 @@ const Badge = ({ text, color = "#0d9488" }) => (
     {text}
   </span>
 );
+// Custom legend that always renders ESG pillars in Environmental → Social → Governance order
+const ESG_ORDER = { "ESG Total": -1, Environmental: 0, Social: 1, Governance: 2 };
+const ESGLegend = ({ payload }) => {
+  if (!payload?.length) return null;
+  const sorted = [...payload].sort(
+    (a, b) =>
+      (ESG_ORDER[a.value] ?? 99) - (ESG_ORDER[b.value] ?? 99)
+  );
+  return (
+    <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", fontSize: 11, color: "#64748b", marginTop: 4 }}>
+      {sorted.map((entry, i) => (
+        <div key={i} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <div style={{ width: 10, height: 10, borderRadius: 2, background: entry.color, flexShrink: 0 }} />
+          <span>{entry.value}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
+// Custom legend that always renders Main Market before ACE Market
+const MKT_ORDER = { "Main Market": 0, Main: 0, "ACE Market": 1, ACE: 1 };
+const MarketLegend = ({ payload }) => {
+  if (!payload?.length) return null;
+  const sorted = [...payload].sort(
+    (a, b) => (MKT_ORDER[a.value] ?? 99) - (MKT_ORDER[b.value] ?? 99)
+  );
+  return (
+    <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", fontSize: 11, color: "#64748b", marginTop: 4 }}>
+      {sorted.map((entry, i) => (
+        <div key={i} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+          <div style={{ width: 10, height: 10, borderRadius: 2, background: entry.color, flexShrink: 0 }} />
+          <span>{entry.value}</span>
+        </div>
+      ))}
+    </div>
+  );
+};
 const TabBtn = ({ active, onClick, children }) => (
   <button
     onClick={onClick}
@@ -38033,7 +38070,7 @@ function OverviewTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<ESGLegend />} />
               <Line
                 type="monotone"
                 dataKey="esg_com"
@@ -38223,7 +38260,7 @@ function OverviewTab() {
               tickFormatter={(v) => v + "%"}
             />
             <Tooltip content={<Tip />} />
-            <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+            <Legend content={<ESGLegend />} />
             <Bar dataKey="Environmental" fill={C.env} radius={[4, 4, 0, 0]} />
             <Bar dataKey="Social" fill={C.soc} radius={[4, 4, 0, 0]} />
             <Bar dataKey="Governance" fill={C.gov} radius={[4, 4, 0, 0]} />
@@ -38304,7 +38341,7 @@ function PillarsTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<ESGLegend />} />
               <Line
                 type="monotone"
                 dataKey="Environmental"
@@ -38352,7 +38389,7 @@ function PillarsTab() {
                 ))}
               </Pie>
               <Tooltip formatter={(v, name) => [v + "%", name]} />
-              <Legend wrapperStyle={{ fontSize: 11 }} />
+              <Legend content={<ESGLegend />} />
             </PieChart>
           </ResponsiveContainer>
         </Card>
@@ -38384,7 +38421,7 @@ function PillarsTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<ESGLegend />} />
               <Line
                 type="monotone"
                 dataKey="Environmental"
@@ -38583,7 +38620,7 @@ function MarketTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<MarketLegend />} />
               <Line
                 type="monotone"
                 dataKey="Main Market"
@@ -38628,7 +38665,7 @@ function MarketTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<MarketLegend />} />
               <Bar
                 dataKey="Main"
                 name="Main Market"
@@ -38672,7 +38709,7 @@ function MarketTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 10, color: "#64748b" }} />
+              <Legend content={<ESGLegend />} />
               <Line
                 type="monotone"
                 dataKey="Environmental"
@@ -38722,7 +38759,7 @@ function MarketTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 10, color: "#64748b" }} />
+              <Legend content={<ESGLegend />} />
               <Line
                 type="monotone"
                 dataKey="Environmental"
@@ -38815,7 +38852,7 @@ function MarketTab() {
                 );
               }}
             />
-            <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+            <Legend content={<MarketLegend />} />
             <Bar dataKey="Main" name="Main Market" fill={C.main} stackId="a" />
             <Bar
               dataKey="ACE"
@@ -40172,7 +40209,7 @@ function ShariahTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<ESGLegend />} />
               <Line
                 type="monotone"
                 dataKey="env_com"
@@ -40256,7 +40293,7 @@ function ShariahTab() {
                 tickFormatter={(v) => v + "%"}
               />
               <Tooltip content={<Tip />} />
-              <Legend wrapperStyle={{ fontSize: 11, color: "#64748b" }} />
+              <Legend content={<MarketLegend />} />
               <Bar
                 dataKey="Main"
                 name="Main Market"
