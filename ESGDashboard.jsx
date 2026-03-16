@@ -38326,10 +38326,10 @@ function OverviewTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>All pillars accelerating:</b> Environmental (+62%), Social
-            (+48%), and Governance (+14%) all show upward momentum.
-            Environmental's acceleration outpaces others, signaling corporate
-            focus on climate risks.
+            <b>All pillars accelerating:</b> Environmental, Social, and
+            Governance all show upward momentum across 2022-2024. Environmental
+            accelerates most notably, reflecting growing corporate attention to
+            climate risks and disclosure.
           </div>
         </div>
       </Card>
@@ -38504,10 +38504,9 @@ function PillarsTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              Despite rapid growth, <b>Governance maintains dominance</b>—42% of
-              total ESG share. This reflects Malaysia's Islamic finance
-              requirements (Shariah Supervisory Boards). Environmental has grown
-              to 33%, increasingly competitive.
+              <b>Governance leads ESG communication at 42%</b> (avg 10.98),
+              while Environmental (30%, avg 7.89) and Social (27%, avg 7.14)
+              follow—reflecting firms' prioritization hierarchy.
             </div>
           </div>
         </Card>
@@ -38583,10 +38582,10 @@ function PillarsTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            Governance leads at 42.2% of total ESG intensity — driven by Shariah
-            Supervisory Board disclosures. <b>Environmental grew fastest</b>:
-            from 6.04% (2022) to 9.78% (2024), a +62% relative increase. Social
-            followed a similar upward trajectory.
+            Governance dominates with 42.2% share (avg 11.0). Environmental
+            (30.3%, avg 7.9) and Social (27.4%, avg 7.1) follow. This 42-30-27
+            composition reflects firms' prioritization hierarchy across the
+            three pillars.
           </div>
         </div>
       </Card>
