@@ -38272,6 +38272,28 @@ function OverviewTab() {
               </div>
             ))}
           </div>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> ESG communication scores grew
+              consistently at <strong>17.8%</strong> (2022→2023) and{" "}
+              <strong>15.4%</strong> (2023→2024), suggesting sustained momentum
+              rather than a one-off spike. The slight deceleration indicates
+              early adopters have already raised their scores, with remaining
+              growth driven by laggards catching up.
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -39144,6 +39166,31 @@ function SectorsTab() {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> <strong>Energy</strong> and{" "}
+              <strong>Utilities</strong> lead with the highest ESG communication
+              intensity (~31–32%), likely driven by regulatory scrutiny and
+              resource-intensive operations. <strong>Financial Services</strong>{" "}
+              ranks 3rd in level but grew only +1.64pp — the slowest of all
+              sectors — signalling a potential plateau. <strong>Technology</strong>{" "}
+              and <strong>Telecoms</strong> trail at the bottom (~24%), revealing
+              a gap of ~7.8pp between top and bottom sectors that highlights
+              uneven ESG disclosure maturity across industries.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
@@ -39398,6 +39445,35 @@ function SectorsTab() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        <div
+          style={{
+            marginTop: 14,
+            background: "#f0fdf9",
+            border: "1px solid #99f6e4",
+            borderRadius: 8,
+            padding: "10px 14px",
+            display: "flex",
+            gap: 8,
+            alignItems: "flex-start",
+          }}
+        >
+          <span style={{ fontSize: 14 }}>💡</span>
+          <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
+            <strong>Key Insight:</strong> Only{" "}
+            <strong>Energy and Transportation & Logistics</strong> qualify as{" "}
+            <strong>Leaders</strong> — both are resource-intensive sectors under
+            high regulatory pressure. <strong>Utilities, Healthcare, and
+            Plantation</strong> are <strong>Mature</strong>: already high
+            communicators but losing momentum. The largest opportunity lies in
+            the <strong>Catching-up</strong> cluster —{" "}
+            <strong>Industrial, Consumer Products, and Construction</strong> —
+            which combine lower current levels with the fastest growth rates
+            (~9pp). Notably, <strong>Financial Services</strong> is the most
+            concerning <strong>Laggard</strong>, ranking 3rd in overall level
+            yet posting the weakest growth of all sectors (+1.64pp), signalling
+            stagnation rather than maturity.
           </div>
         </div>
       </Card>
@@ -39729,6 +39805,33 @@ function DistributionTab() {
               </div>
             ))}
           </div>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
+              <strong>Key Insight:</strong> The distribution peaks at{" "}
+              <strong>20–25%</strong> (444 obs, 23.8%), revealing a clear market
+              norm where most firms cluster in this mid-range. Over{" "}
+              <strong>76% of all observations</strong> fall within the 15–35%
+              band, indicating a relatively tight consensus on disclosure
+              practice. Only <strong>8.2%</strong> of firm-years score below 15%
+              — true low communicators are a minority — while just{" "}
+              <strong>7.8%</strong> exceed 40%, confirming that elite ESG
+              communicators remain rare outliers. The right-skewed tail
+              (stretching to 65–70%) signals meaningful upside potential for
+              firms willing to move beyond the crowd.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle title="Distribution Key Statistics" />
@@ -39783,6 +39886,31 @@ function DistributionTab() {
                 </div>
               </div>
             ))}
+          </div>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
+              <strong>Key Insight:</strong> The entire distribution is shifting
+              rightward — not just top performers. The median rose{" "}
+              <strong>+7.99pp</strong> (21.0% → 29.0%), while Q1 jumped from{" "}
+              <strong>16.9% to 24.0%</strong>, meaning even the bottom quartile
+              is materially improving. The minimum floor lifted to{" "}
+              <strong>8%</strong> in 2024, eliminating near-zero communicators.
+              The widening IQR (8.7pp → 10.8pp) suggests firms are diverging —
+              improvers are pulling away from the stagnant, creating a growing
+              gap between the top and bottom of the market.
+            </div>
           </div>
         </Card>
       </div>
@@ -40492,6 +40620,32 @@ function ShariahTab() {
               />
             </LineChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
+              <strong>Key Insight:</strong>{" "}
+              <strong>Governance leads all three years</strong> (10.3% → 11.7%)
+              but its dominance is narrowing.{" "}
+              <strong>Environmental grew the fastest</strong> at +61.9%
+              (6.0% → 9.8%), followed by Social at +48.5% (5.7% → 8.5%),
+              while Governance grew only +13.7%. In 2022, Governance was nearly{" "}
+              <strong>1.8× higher</strong> than Environmental; by 2024 that gap
+              has compressed to just <strong>1.2×</strong>. If current growth
+              rates hold, E and S pillars could converge with G within the next
+              few reporting cycles.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
@@ -40520,6 +40674,32 @@ function ShariahTab() {
               <Tooltip formatter={(v) => [pct(v), "Intensity"]} />
             </RadarChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
+              <strong>Key Insight:</strong> The 2024 radar reveals a visibly{" "}
+              <strong>unbalanced ESG profile</strong>.{" "}
+              <strong>Governance dominates at 11.7%</strong> — 37.7% higher than
+              Environmental (9.8%) and 37.5% higher than Social (8.5%). The
+              asymmetric shape reflects a market where firms are most comfortable
+              disclosing board and compliance matters, while{" "}
+              <strong>Environmental and Social reporting remain
+              underdeveloped</strong>. A balanced radar would require E and S to
+              close a ~2–3pp gap, representing a clear target for firms aiming
+              for holistic ESG communication.
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -40564,6 +40744,32 @@ function ShariahTab() {
               />
             </BarChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
+              <strong>Key Insight:</strong> The most counterintuitive finding is
+              that <strong>ACE Market firms score higher on Governance
+              (11.6%) than Main Market firms (10.9%)</strong>, despite being
+              smaller growth-stage companies. However, ACE severely lags on{" "}
+              <strong>Environmental (5.3% vs 8.3%)</strong> and{" "}
+              <strong>Social (5.3% vs 7.4%)</strong> — a gap of ~3pp on each.
+              For ACE firms, Governance accounts for <strong>52% of total
+              ESG communication</strong> versus 41% for Main, revealing a
+              compliance-first mindset where board disclosures are prioritised
+              but environmental and social reporting remains largely undeveloped.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
@@ -41375,6 +41581,18 @@ function GWTab() {
                 />
                 <ReferenceLine x={0} stroke="#94a3b8" strokeWidth={1} />
                 <ReferenceLine y={0} stroke="#94a3b8" strokeWidth={1} />
+                <ReferenceLine
+                  segment={[{ x: -4, y: -4 }, { x: 4, y: 4 }]}
+                  stroke="#94a3b8"
+                  strokeDasharray="6 3"
+                  strokeWidth={1.5}
+                  label={{
+                    value: "Perfect Alignment",
+                    position: "insideTopLeft",
+                    fill: "#94a3b8",
+                    fontSize: 9,
+                  }}
+                />
                 <Tooltip
                   content={({ active, payload }) => {
                     if (!active || !payload?.length) return null;
