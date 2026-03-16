@@ -36767,370 +36767,370 @@ const AGG = {
   top_by_quad: {
     "Aligned Leaders": [
       {
-        co: "NESTLE (MALAYSIA) BHD",
+        co: "NESTLE (MALAYSIA)",
         sector: "CONSUMER PRODUCTS AND SERVICES",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.899,
-        z_com: 1.177,
-        gw_gap: -1.722,
+        z_esg: 2.9,
+        z_com: 1.18,
+        gw_gap: -1.72,
       },
       {
         co: "MISC BHD",
         sector: "TRANSPORTATION AND LOGISTICS",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.517,
-        z_com: 2.189,
-        gw_gap: -0.327,
+        z_esg: 2.52,
+        z_com: 2.19,
+        gw_gap: -0.33,
       },
       {
-        co: "UEM SUNRISE BHD",
+        co: "UEM SUNRISE",
         sector: "PROPERTY",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.474,
-        z_com: 1.033,
-        gw_gap: -1.441,
+        z_esg: 2.47,
+        z_com: 1.03,
+        gw_gap: -1.44,
       },
       {
-        co: "IOI PROPERTIES GROUP BHD",
+        co: "IOI PROPERTIES GROUP",
         sector: "PROPERTY",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.435,
-        z_com: 1.347,
-        gw_gap: -1.087,
+        z_esg: 2.43,
+        z_com: 1.35,
+        gw_gap: -1.09,
       },
       {
-        co: "TOP GLOVE CORPORATION BHD",
+        co: "TOP GLOVE CORPORATION",
         sector: "HEALTHCARE",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.297,
-        z_com: 0.346,
-        gw_gap: -1.951,
+        z_esg: 2.3,
+        z_com: 0.35,
+        gw_gap: -1.95,
       },
       {
-        co: "ECO WORLD DEVELOPMENT GROUP BHD",
+        co: "ECO WORLD DEV.GROUP",
         sector: "PROPERTY",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.287,
-        z_com: 0.436,
+        z_esg: 2.29,
+        z_com: 0.44,
         gw_gap: -1.85,
       },
       {
-        co: "GAMUDA BHD",
+        co: "GAMUDA",
         sector: "CONSTRUCTION",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.279,
+        z_esg: 2.28,
         z_com: 0.65,
-        gw_gap: -1.629,
+        gw_gap: -1.63,
       },
       {
-        co: "AWANBIRU TECHNOLOGY BHD",
+        co: "AWANBIRU TECHNOLOGY",
         sector: "TECHNOLOGY",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.229,
-        z_com: 0.565,
-        gw_gap: -1.664,
+        z_esg: 2.23,
+        z_com: 0.56,
+        gw_gap: -1.66,
       },
       {
-        co: "SIME DARBY PROPERTY BHD",
+        co: "SIME DARBY PROPERTY",
         sector: "PROPERTY",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
         z_esg: 2.19,
-        z_com: 1.216,
-        gw_gap: -0.974,
+        z_com: 1.22,
+        gw_gap: -0.97,
       },
       {
-        co: "IHH HEALTHCARE BHD",
+        co: "IHH HEALTHCARE",
         sector: "HEALTHCARE",
         market: "MAIN MARKET",
         quadrant: "Aligned Leaders",
-        z_esg: 2.179,
-        z_com: 0.458,
-        gw_gap: -1.721,
+        z_esg: 2.18,
+        z_com: 0.46,
+        gw_gap: -1.72,
       },
     ],
     "Potential Overstatement": [
       {
-        co: "HAILY GROUP BHD",
+        co: "HAILY GROUP",
         sector: "CONSTRUCTION",
         market: "ACE MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -1.124,
-        z_com: 0.992,
-        gw_gap: 2.116,
+        z_esg: -1.12,
+        z_com: 0.99,
+        gw_gap: 2.12,
       },
       {
-        co: "SFP TECH HOLDINGS BHD",
+        co: "SFP TECH HOLDINGS",
         sector: "TECHNOLOGY",
         market: "ACE MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -0.574,
-        z_com: 1.346,
+        z_esg: -0.57,
+        z_com: 1.35,
         gw_gap: 1.92,
       },
       {
-        co: "SAMAIDEN GROUP BHD",
+        co: "SAMAIDEN GROUP",
         sector: "ENERGY",
         market: "MAIN MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -1.036,
-        z_com: 0.867,
-        gw_gap: 1.903,
+        z_esg: -1.04,
+        z_com: 0.87,
+        gw_gap: 1.9,
       },
       {
-        co: "THREE-A RESOURCES BHD",
+        co: "THREE-A RES.",
         sector: "CONSUMER PRODUCTS AND SERVICES",
         market: "MAIN MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -0.449,
+        z_esg: -0.45,
         z_com: 1.43,
-        gw_gap: 1.879,
+        gw_gap: 1.88,
       },
       {
-        co: "TEX CYCLE TECHNOLOGY (M) BHD",
+        co: "TEX CYCLE TECHNOLOGY",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "ACE MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -0.358,
-        z_com: 1.469,
-        gw_gap: 1.827,
+        z_esg: -0.36,
+        z_com: 1.47,
+        gw_gap: 1.83,
       },
       {
-        co: "SENG FONG HOLDINGS BHD",
-        sector: "INDUSTRIAL PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
-        quadrant: "Potential Overstatement",
-        z_esg: -0.902,
-        z_com: 0.906,
-        gw_gap: 1.807,
-      },
-      {
-        co: "ORIENTAL FOOD INDUSTRIES HOLDINGS BHD",
+        co: "SENG FONG HOLDINGS",
         sector: "CONSUMER PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
+        market: "ACE MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -1.699,
-        z_com: 0.024,
-        gw_gap: 1.723,
+        z_esg: -0.9,
+        z_com: 0.46,
+        gw_gap: 1.81,
       },
       {
-        co: "JAYA TIASA HOLDINGS BHD",
+        co: "ORIENTAL FOOD INDS.HDG.",
+        sector: "CONSUMER PRODUCTS AND SERVICES",
+        market: "ACE MARKET",
+        quadrant: "Potential Overstatement",
+        z_esg: -1.7,
+        z_com: 0.02,
+        gw_gap: 1.72,
+      },
+      {
+        co: "JAYA TIASA HOLDINGS",
         sector: "PLANTATION",
         market: "MAIN MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -0.732,
-        z_com: 0.953,
-        gw_gap: 1.684,
+        z_esg: -0.73,
+        z_com: 0.95,
+        gw_gap: 1.68,
       },
       {
-        co: "HPMT HOLDINGS BHD",
+        co: "HPMT HOLDINGS",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
-        quadrant: "Potential Overstatement",
-        z_esg: -1.426,
-        z_com: 0.23,
-        gw_gap: 1.656,
-      },
-      {
-        co: "SILVER RIDGE HOLDINGS BHD",
-        sector: "TELECOMMUNICATIONS AND MEDIA",
         market: "ACE MARKET",
         quadrant: "Potential Overstatement",
-        z_esg: -1.544,
-        z_com: 0.093,
-        gw_gap: 1.637,
+        z_esg: -1.43,
+        z_com: 0.23,
+        gw_gap: 1.66,
+      },
+      {
+        co: "SILVER RIDGE HOLDINGS",
+        sector: "INDUSTRIAL PRODUCTS AND SERVICES",
+        market: "ACE MARKET",
+        quadrant: "Potential Overstatement",
+        z_esg: -1.54,
+        z_com: 0.09,
+        gw_gap: 1.64,
       },
     ],
     "Low ESG Profile": [
       {
-        co: "SCOPE INDUSTRIES BHD",
+        co: "SCOPE INDUSTRIES",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.768,
+        z_esg: -1.77,
         z_com: -0.86,
-        gw_gap: 0.908,
+        gw_gap: 0.91,
       },
       {
-        co: "CYL CORPORATION BHD",
-        sector: "INDUSTRIAL PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
-        quadrant: "Low ESG Profile",
-        z_esg: -1.752,
-        z_com: -0.829,
-        gw_gap: 0.924,
-      },
-      {
-        co: "HHRG BHD",
+        co: "CYL CORPORATION",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.691,
-        z_com: -1.109,
-        gw_gap: 0.582,
+        z_esg: -1.75,
+        z_com: -0.83,
+        gw_gap: 0.92,
       },
       {
-        co: "VINVEST CAPITAL HOLDINGS BHD",
+        co: "HHRG",
+        sector: "CONSUMER PRODUCTS AND SERVICES",
+        market: "ACE MARKET",
+        quadrant: "Low ESG Profile",
+        z_esg: -1.69,
+        z_com: -1.11,
+        gw_gap: 0.58,
+      },
+      {
+        co: "VINVEST CAPITAL HOLDINGS",
         sector: "TECHNOLOGY",
         market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.672,
-        z_com: -1.707,
-        gw_gap: -0.035,
+        z_esg: -1.67,
+        z_com: -1.71,
+        gw_gap: -0.03,
       },
       {
-        co: "XOX BHD",
+        co: "XOX",
         sector: "TELECOMMUNICATIONS AND MEDIA",
         market: "ACE MARKET",
         quadrant: "Low ESG Profile",
         z_esg: -1.62,
-        z_com: -0.721,
-        gw_gap: 0.898,
+        z_com: -0.72,
+        gw_gap: 0.9,
       },
       {
-        co: "TECHBASE INDUSTRIES BHD",
-        sector: "CONSUMER PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
+        co: "TECHBASE INDUSTRIES",
+        sector: "TECHNOLOGY",
+        market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.589,
-        z_com: -1.615,
-        gw_gap: -0.026,
+        z_esg: -1.59,
+        z_com: -1.61,
+        gw_gap: -0.03,
       },
       {
-        co: "PANSAR BHD",
+        co: "PANSAR",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
+        market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.577,
+        z_esg: -1.58,
         z_com: -0.84,
-        gw_gap: 0.737,
+        gw_gap: 0.74,
       },
       {
-        co: "ACO GROUP BHD",
+        co: "ACO GROUP",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.557,
-        z_com: -0.838,
-        gw_gap: 0.719,
+        z_esg: -1.56,
+        z_com: -0.84,
+        gw_gap: 0.72,
       },
       {
-        co: "FAST ENERGY HOLDINGS BHD",
+        co: "FAST ENERGY HOLDINGS",
+        sector: "ENERGY",
+        market: "ACE MARKET",
+        quadrant: "Low ESG Profile",
+        z_esg: -1.55,
+        z_com: -0.67,
+        gw_gap: 0.88,
+      },
+      {
+        co: "TANCO HOLDINGS",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "ACE MARKET",
         quadrant: "Low ESG Profile",
-        z_esg: -1.547,
-        z_com: -0.666,
-        gw_gap: 0.881,
-      },
-      {
-        co: "TANCO HOLDINGS BHD",
-        sector: "PROPERTY",
-        market: "MAIN MARKET",
-        quadrant: "Low ESG Profile",
-        z_esg: -1.526,
-        z_com: -1.232,
-        gw_gap: 0.294,
+        z_esg: -1.53,
+        z_com: -1.23,
+        gw_gap: 0.29,
       },
     ],
     "Under-Communicators": [
       {
-        co: "PARAMOUNT CORPORATION BHD",
+        co: "PARAMOUNT CORPORATION",
         sector: "PROPERTY",
         market: "MAIN MARKET",
         quadrant: "Under-Communicators",
-        z_esg: 1.502,
+        z_esg: 1.5,
         z_com: -1.04,
-        gw_gap: -2.542,
+        gw_gap: -2.54,
       },
       {
-        co: "LBS BINA GROUP BHD",
+        co: "LBS BINA GROUP",
         sector: "PROPERTY",
         market: "MAIN MARKET",
         quadrant: "Under-Communicators",
-        z_esg: 1.338,
-        z_com: -0.993,
-        gw_gap: -2.331,
+        z_esg: 1.34,
+        z_com: -0.99,
+        gw_gap: -2.33,
       },
       {
-        co: "MALAYSIA STEEL WORKS (KL) BHD",
+        co: "MALAYSIA STEEL WKS.(KL)",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "MAIN MARKET",
         quadrant: "Under-Communicators",
-        z_esg: 1.437,
-        z_com: -0.757,
-        gw_gap: -2.194,
+        z_esg: 1.44,
+        z_com: -0.76,
+        gw_gap: -2.19,
       },
       {
-        co: "NOVA MSC BHD",
-        sector: "TECHNOLOGY",
-        market: "ACE MARKET",
+        co: "MBSB",
+        sector: "FINANCIAL SERVICES",
+        market: "MAIN MARKET",
         quadrant: "Under-Communicators",
-        z_esg: 0.146,
-        z_com: -1.909,
-        gw_gap: -2.055,
+        z_esg: 1.82,
+        z_com: -0.28,
+        gw_gap: -2.1,
       },
       {
-        co: "VITROX CORPORATION BHD",
+        co: "NOVA MSC",
+        sector: "PROPERTY",
+        market: "MAIN MARKET",
+        quadrant: "Under-Communicators",
+        z_esg: 0.15,
+        z_com: -1.91,
+        gw_gap: -2.06,
+      },
+      {
+        co: "VITROX CORPORATION",
         sector: "TECHNOLOGY",
         market: "MAIN MARKET",
         quadrant: "Under-Communicators",
-        z_esg: 1.412,
-        z_com: -0.633,
-        gw_gap: -2.046,
+        z_esg: 1.41,
+        z_com: -0.63,
+        gw_gap: -2.05,
       },
       {
-        co: "ENGTEX GROUP BHD",
+        co: "QL RESOURCES",
+        sector: "PLANTATION",
+        market: "MAIN MARKET",
+        quadrant: "Under-Communicators",
+        z_esg: 1.41,
+        z_com: -0.41,
+        gw_gap: -1.82,
+      },
+      {
+        co: "MATRIX CONCEPTS HOLDINGS",
+        sector: "PROPERTY",
+        market: "MAIN MARKET",
+        quadrant: "Under-Communicators",
+        z_esg: 1.75,
+        z_com: -0.07,
+        gw_gap: -1.81,
+      },
+      {
+        co: "ENGTEX GROUP",
         sector: "INDUSTRIAL PRODUCTS AND SERVICES",
         market: "MAIN MARKET",
         quadrant: "Under-Communicators",
         z_esg: 0.35,
-        z_com: -1.322,
-        gw_gap: -1.671,
+        z_com: -1.32,
+        gw_gap: -1.67,
       },
       {
-        co: "CAPITAL A BHD",
-        sector: "CONSUMER PRODUCTS AND SERVICES",
+        co: "CAPITAL A",
+        sector: "TRANSPORTATION AND LOGISTICS",
         market: "MAIN MARKET",
         quadrant: "Under-Communicators",
         z_esg: 1.3,
-        z_com: -0.243,
-        gw_gap: -1.543,
-      },
-      {
-        co: "GENTING PLANTATIONS BHD",
-        sector: "PLANTATION",
-        market: "MAIN MARKET",
-        quadrant: "Under-Communicators",
-        z_esg: 1.005,
-        z_com: -0.516,
-        gw_gap: -1.521,
-      },
-      {
-        co: "RAMSSOL GROUP BHD",
-        sector: "TECHNOLOGY",
-        market: "ACE MARKET",
-        quadrant: "Under-Communicators",
-        z_esg: 0.323,
-        z_com: -1.062,
-        gw_gap: -1.385,
-      },
-      {
-        co: "MALAYAN CEMENT BHD",
-        sector: "INDUSTRIAL PRODUCTS AND SERVICES",
-        market: "MAIN MARKET",
-        quadrant: "Under-Communicators",
-        z_esg: 0.748,
-        z_com: -0.495,
-        gw_gap: -1.243,
+        z_com: -0.24,
+        gw_gap: -1.54,
       },
     ],
   },
@@ -37935,18 +37935,40 @@ const Badge = ({ text, color = "#0d9488" }) => (
   </span>
 );
 // Custom legend that always renders ESG pillars in Environmental → Social → Governance order
-const ESG_ORDER = { "ESG Total": -1, Environmental: 0, Social: 1, Governance: 2 };
+const ESG_ORDER = {
+  "ESG Total": -1,
+  Environmental: 0,
+  Social: 1,
+  Governance: 2,
+};
 const ESGLegend = ({ payload }) => {
   if (!payload?.length) return null;
   const sorted = [...payload].sort(
-    (a, b) =>
-      (ESG_ORDER[a.value] ?? 99) - (ESG_ORDER[b.value] ?? 99)
+    (a, b) => (ESG_ORDER[a.value] ?? 99) - (ESG_ORDER[b.value] ?? 99),
   );
   return (
-    <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", fontSize: 11, color: "#64748b", marginTop: 4 }}>
+    <div
+      style={{
+        display: "flex",
+        gap: 14,
+        justifyContent: "center",
+        flexWrap: "wrap",
+        fontSize: 11,
+        color: "#64748b",
+        marginTop: 4,
+      }}
+    >
       {sorted.map((entry, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: 5 }}>
-          <div style={{ width: 10, height: 10, borderRadius: 2, background: entry.color, flexShrink: 0 }} />
+          <div
+            style={{
+              width: 10,
+              height: 10,
+              borderRadius: 2,
+              background: entry.color,
+              flexShrink: 0,
+            }}
+          />
           <span>{entry.value}</span>
         </div>
       ))}
@@ -37958,13 +37980,31 @@ const MKT_ORDER = { "Main Market": 0, Main: 0, "ACE Market": 1, ACE: 1 };
 const MarketLegend = ({ payload }) => {
   if (!payload?.length) return null;
   const sorted = [...payload].sort(
-    (a, b) => (MKT_ORDER[a.value] ?? 99) - (MKT_ORDER[b.value] ?? 99)
+    (a, b) => (MKT_ORDER[a.value] ?? 99) - (MKT_ORDER[b.value] ?? 99),
   );
   return (
-    <div style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap", fontSize: 11, color: "#64748b", marginTop: 4 }}>
+    <div
+      style={{
+        display: "flex",
+        gap: 14,
+        justifyContent: "center",
+        flexWrap: "wrap",
+        fontSize: 11,
+        color: "#64748b",
+        marginTop: 4,
+      }}
+    >
       {sorted.map((entry, i) => (
         <div key={i} style={{ display: "flex", alignItems: "center", gap: 5 }}>
-          <div style={{ width: 10, height: 10, borderRadius: 2, background: entry.color, flexShrink: 0 }} />
+          <div
+            style={{
+              width: 10,
+              height: 10,
+              borderRadius: 2,
+              background: entry.color,
+              flexShrink: 0,
+            }}
+          />
           <span>{entry.value}</span>
         </div>
       ))}
@@ -38238,9 +38278,9 @@ function OverviewTab() {
       <Card>
         <SecTitle
           title="Pillar Comparison Across Years (2022–2024)"
-          sub="Environmental · Social · Governance — sorted E → S → G"
+          sub="All pillars show steady growth, with Environmental communication seeing the largest proportional increase"
         />
-        <ResponsiveContainer width="100%" height={220}>
+        <ResponsiveContainer width="100%" height={180}>
           <BarChart data={pillarBar} barGap={6}>
             <CartesianGrid
               strokeDasharray="3 3"
@@ -38266,6 +38306,32 @@ function OverviewTab() {
             <Bar dataKey="Governance" fill={C.gov} radius={[4, 4, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
+        <div
+          style={{
+            marginTop: 12,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div
+            style={{
+              color: "#92400e",
+              fontWeight: 700,
+              fontSize: 11,
+              marginBottom: 5,
+            }}
+          >
+            Key Insight
+          </div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            <b>All pillars accelerating:</b> Environmental (+62%), Social
+            (+48%), and Governance (+14%) all show upward momentum.
+            Environmental's acceleration outpaces others, signaling corporate
+            focus on climate risks.
+          </div>
+        </div>
       </Card>
     </div>
   );
@@ -38318,7 +38384,7 @@ function PillarsTab() {
         <Card>
           <SecTitle
             title="E · S · G Intensity Trend (2022–2024)"
-            sub="All three pillars sorted Environmental → Social → Governance"
+            sub="Governance dominates baseline; Environmental shows strongest 60% growth"
           />
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={pillarTrend}>
@@ -38365,6 +38431,32 @@ function PillarsTab() {
               />
             </LineChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              <b>Governance baseline dominance:</b> Governance stays 10%+,
+              Environmental accelerates from 6% to ~9.8%, Social from 5.7% to
+              8.5%. Environmental's 60% relative growth is the largest
+              transformation in ESG communication patterns.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
@@ -38392,115 +38484,9 @@ function PillarsTab() {
               <Legend content={<ESGLegend />} />
             </PieChart>
           </ResponsiveContainer>
-        </Card>
-      </div>
-
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
-        <Card>
-          <SecTitle
-            title="Pillar × Year Comparison"
-            sub="E → S → G sorted · All years side by side"
-          />
-          <ResponsiveContainer width="100%" height={230}>
-            <LineChart data={pillarTrend}>
-              <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="#f1f5f9"
-                vertical={false}
-              />
-              <XAxis
-                dataKey="year"
-                tick={{ fill: "#475569", fontSize: 11 }}
-                axisLine={false}
-                tickLine={false}
-              />
-              <YAxis
-                tick={{ fill: "#94a3b8", fontSize: 10 }}
-                axisLine={false}
-                tickLine={false}
-                tickFormatter={(v) => v + "%"}
-              />
-              <Tooltip content={<Tip />} />
-              <Legend content={<ESGLegend />} />
-              <Line
-                type="monotone"
-                dataKey="Environmental"
-                stroke={C.env}
-                strokeWidth={2.5}
-                dot={{ r: 5, fill: C.env, stroke: "#fff", strokeWidth: 2 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Social"
-                stroke={C.soc}
-                strokeWidth={2.5}
-                dot={{ r: 5, fill: C.soc, stroke: "#fff", strokeWidth: 2 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Governance"
-                stroke={C.gov}
-                strokeWidth={2.5}
-                dot={{ r: 5, fill: C.gov, stroke: "#fff", strokeWidth: 2 }}
-              />
-            </LineChart>
-          </ResponsiveContainer>
-        </Card>
-        <Card>
-          <SecTitle
-            title="Governance Dominance — E · S · G Progress"
-            sub="Share and average intensity — Governance consistently leads"
-          />
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 14,
-              marginTop: 8,
-            }}
-          >
-            {pc.map((p) => (
-              <div key={p.name}>
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginBottom: 5,
-                  }}
-                >
-                  <span
-                    style={{ color: "#334155", fontSize: 13, fontWeight: 600 }}
-                  >
-                    {p.name}
-                  </span>
-                  <span
-                    style={{ color: p.color, fontWeight: 700, fontSize: 13 }}
-                  >
-                    {p.pct}%{" "}
-                    <span style={{ color: "#94a3b8", fontSize: 11 }}>
-                      ({pct(p.avg)} avg)
-                    </span>
-                  </span>
-                </div>
-                <div
-                  style={{ background: "#f1f5f9", borderRadius: 5, height: 10 }}
-                >
-                  <div
-                    style={{
-                      width: `${(p.pct / 50) * 100}%`,
-                      height: "100%",
-                      background: p.color,
-                      borderRadius: 5,
-                      transition: "width 0.8s",
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          <div
-            style={{
-              marginTop: 16,
+              marginTop: 12,
               background: "#fef9f0",
               border: "1px solid #fde68a",
               borderRadius: 8,
@@ -38518,15 +38504,92 @@ function PillarsTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              Governance leads at 42.2% of total ESG intensity — driven by
-              Shariah Supervisory Board disclosures.{" "}
-              <b>Environmental grew fastest</b>: from 6.04% (2022) to 9.78%
-              (2024), a +62% relative increase. Social followed a similar upward
-              trajectory.
+              Despite rapid growth, <b>Governance maintains dominance</b>—42% of
+              total ESG share. This reflects Malaysia's Islamic finance
+              requirements (Shariah Supervisory Boards). Environmental has grown
+              to 33%, increasingly competitive.
             </div>
           </div>
         </Card>
       </div>
+
+      <Card>
+        <SecTitle
+          title="Governance Dominance — E · S · G Progress"
+          sub="Share and average intensity — Governance consistently leads"
+        />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 14,
+            marginTop: 8,
+          }}
+        >
+          {pc.map((p) => (
+            <div key={p.name}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginBottom: 5,
+                }}
+              >
+                <span
+                  style={{ color: "#334155", fontSize: 13, fontWeight: 600 }}
+                >
+                  {p.name}
+                </span>
+                <span style={{ color: p.color, fontWeight: 700, fontSize: 13 }}>
+                  {p.pct}%{" "}
+                  <span style={{ color: "#94a3b8", fontSize: 11 }}>
+                    ({pct(p.avg)} avg)
+                  </span>
+                </span>
+              </div>
+              <div
+                style={{ background: "#f1f5f9", borderRadius: 5, height: 10 }}
+              >
+                <div
+                  style={{
+                    width: `${(p.pct / 50) * 100}%`,
+                    height: "100%",
+                    background: p.color,
+                    borderRadius: 5,
+                    transition: "width 0.8s",
+                  }}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            marginTop: 16,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div
+            style={{
+              color: "#92400e",
+              fontWeight: 700,
+              fontSize: 11,
+              marginBottom: 5,
+            }}
+          >
+            Key Insight
+          </div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            Governance leads at 42.2% of total ESG intensity — driven by Shariah
+            Supervisory Board disclosures. <b>Environmental grew fastest</b>:
+            from 6.04% (2022) to 9.78% (2024), a +62% relative increase. Social
+            followed a similar upward trajectory.
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }
@@ -38599,7 +38662,7 @@ function MarketTab() {
             title="Main vs ACE ESG Communication Trend (2022–2024)"
             sub="Both markets show upward trajectory; Main Market consistently higher"
           />
-          <ResponsiveContainer width="100%" height={240}>
+          <ResponsiveContainer width="100%" height={180}>
             <LineChart data={trendCompare}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -38638,6 +38701,32 @@ function MarketTab() {
               />
             </LineChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              <b>Gap narrowing:</b> Main Market leads 30.5% vs ACE 26.2% in
+              2024. ACE grew 43% (2022–2024) while Main grew 35%. ACE
+              acceleration suggests smaller firms are rapidly integrating ESG
+              communication.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
@@ -38645,7 +38734,7 @@ function MarketTab() {
             title="Pillar-Level Market Comparison (E → S → G)"
             sub="Environmental, Social, Governance breakdown by listing segment"
           />
-          <ResponsiveContainer width="100%" height={240}>
+          <ResponsiveContainer width="100%" height={180}>
             <BarChart data={pillarComp} barGap={8}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -38680,6 +38769,32 @@ function MarketTab() {
               />
             </BarChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              <b>Main Market leads on Environmental and Social,</b> but ACE
+              surpasses in Governance (12.5% vs 11.6%). Environmental gap widest
+              (10.2% vs 6.9%), showing largest opportunity for ACE firms to
+              catch up.
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -38687,7 +38802,7 @@ function MarketTab() {
         <Card>
           <SecTitle
             title="Main Market: E · S · G Pillar Trends"
-            sub="Environmental → Social → Governance — 2022–2024"
+            sub="Main Market shows strong growth across all pillars, with Environmental leading 60% increase"
           />
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={mainPillar}>
@@ -38733,11 +38848,37 @@ function MarketTab() {
               />
             </LineChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              <b>Main Market stable & consistent:</b> Environmental grows 60%,
+              Social 46%, Governance 13%. Established firms maintain disclosure
+              momentum but at moderate pace—Governance plateau reflects
+              saturation.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
             title="ACE Market: E · S · G Pillar Trends"
-            sub="Environmental → Social → Governance — 2022–2024"
+            sub="ACE Market accelerates dramatically—Environmental and Social grow 80%+, nearly catching Main Market"
           />
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={acePillar}>
@@ -38783,6 +38924,32 @@ function MarketTab() {
               />
             </LineChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              <b>ACE accelerating rapidly:</b> Environmental +83%, Social +70%,
+              Governance +19%. Smaller firms catching up—Environmental averaging
+              6.9% (vs 10.2% Main), showing nascent but accelerating ESG
+              adoption.
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -38863,6 +39030,32 @@ function MarketTab() {
             />
           </BarChart>
         </ResponsiveContainer>
+        <div
+          style={{
+            marginTop: 12,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div
+            style={{
+              color: "#92400e",
+              fontWeight: 700,
+              fontSize: 11,
+              marginBottom: 5,
+            }}
+          >
+            Key Insight
+          </div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            <b>Main Market dominates by volume:</b> 543 firms vs 78 ACE firms.
+            Main concentrated in Property, Banking, Construction. ACE has more
+            distributed representation, suggesting smaller firms span diverse
+            sectors at lower ESG intensity.
+          </div>
+        </div>
       </Card>
     </div>
   );
@@ -38870,6 +39063,20 @@ function MarketTab() {
 
 function SectorsTab() {
   const sd = AGG.sec_data;
+  const [visibleSectors, setVisibleSectors] = useState(
+    new Set(sd.map((d) => d.sector)),
+  );
+
+  const toggleSector = (sector) => {
+    const newVisible = new Set(visibleSectors);
+    if (newVisible.has(sector)) {
+      newVisible.delete(sector);
+    } else {
+      newVisible.add(sector);
+    }
+    setVisibleSectors(newVisible);
+  };
+
   const byLevel = [...sd].sort((a, b) => b.esg_com - a.esg_com);
   const byGrowth = [...sd].sort((a, b) => b.growth - a.growth);
   const medLevel = 31;
@@ -38900,7 +39107,7 @@ function SectorsTab() {
             title="Average ESG Communication by Sector (2022–2024)"
             sub="Sector ranking by mean ESG communication intensity"
           />
-          <ResponsiveContainer width="100%" height={320}>
+          <ResponsiveContainer width="100%" height={280}>
             <BarChart
               data={byLevel.map((d) => ({
                 sector: SHORT[d.sector] || d.sector,
@@ -38986,6 +39193,32 @@ function SectorsTab() {
               </Bar>
             </BarChart>
           </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              <b>Construction leads growth momentum:</b> +9.38pp fastest,
+              followed by Consumer Products +9.3pp and Energy +9.24pp. Mature
+              sectors (Property +7.3pp, Technology +5.25pp) grow slower,
+              suggesting market saturation in established firms.
+            </div>
+          </div>
         </Card>
       </div>
 
@@ -39204,17 +39437,19 @@ function SectorsTab() {
                   tickFormatter={(v) => v + "%"}
                 />
                 <Tooltip content={<Tip />} />
-                {sd.map((d, i) => (
-                  <Line
-                    key={d.sector}
-                    type="monotone"
-                    dataKey={SHORT[d.sector] || d.sector}
-                    name={SHORT[d.sector] || d.sector}
-                    stroke={C.sectors[i % C.sectors.length]}
-                    strokeWidth={1.5}
-                    dot={false}
-                  />
-                ))}
+                {sd.map((d, i) =>
+                  visibleSectors.has(d.sector) ? (
+                    <Line
+                      key={d.sector}
+                      type="monotone"
+                      dataKey={SHORT[d.sector] || d.sector}
+                      name={SHORT[d.sector] || d.sector}
+                      stroke={C.sectors[i % C.sectors.length]}
+                      strokeWidth={1.5}
+                      dot={false}
+                    />
+                  ) : null,
+                )}
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -39227,27 +39462,49 @@ function SectorsTab() {
               minWidth: 130,
             }}
           >
-            {sd.map((d, i) => (
-              <div
-                key={d.sector}
-                style={{ display: "flex", alignItems: "center", gap: 6 }}
-              >
+            {sd.map((d, i) => {
+              const isVisible = visibleSectors.has(d.sector);
+              return (
                 <div
+                  key={d.sector}
+                  onClick={() => toggleSector(d.sector)}
                   style={{
-                    width: 10,
-                    height: 10,
-                    borderRadius: 2,
-                    background: C.sectors[i % C.sectors.length],
-                    flexShrink: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    cursor: "pointer",
+                    opacity: isVisible ? 1 : 0.4,
+                    transition: "opacity 0.2s",
+                    padding: "4px 6px",
+                    borderRadius: 4,
+                    marginLeft: "-6px",
+                    marginRight: "-6px",
                   }}
-                />
-                <span
-                  style={{ color: "#475569", fontSize: 10, fontWeight: 600 }}
+                  title={isVisible ? "Click to hide" : "Click to show"}
                 >
-                  {SHORT[d.sector] || d.sector}
-                </span>
-              </div>
-            ))}
+                  <div
+                    style={{
+                      width: 10,
+                      height: 10,
+                      borderRadius: 2,
+                      background: C.sectors[i % C.sectors.length],
+                      flexShrink: 0,
+                      opacity: isVisible ? 1 : 0.5,
+                    }}
+                  />
+                  <span
+                    style={{
+                      color: "#475569",
+                      fontSize: 10,
+                      fontWeight: 600,
+                      textDecoration: isVisible ? "none" : "line-through",
+                    }}
+                  >
+                    {SHORT[d.sector] || d.sector}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </Card>
@@ -39255,7 +39512,7 @@ function SectorsTab() {
       <Card>
         <SecTitle
           title="Sector Pillar Breakdown (E · S · G)"
-          sub="Environmental, Social, Governance averages per sector — sorted by ESG total"
+          sub="Energy leads with 32% ESG intensity; Governance consistently significant across all sectors"
         />
         <div
           style={{
@@ -40652,8 +40909,8 @@ function StatsTab() {
               {[
                 [
                   "esg_com",
-                  "0.207***",
-                  "(0.047)",
+                  "0.194***",
+                  "(0.044)",
                   "—",
                   "—",
                   "—",
@@ -40665,8 +40922,8 @@ function StatsTab() {
                   "env_com",
                   "—",
                   "—",
-                  "0.496***",
-                  "(0.142)",
+                  "0.491***",
+                  "(0.133)",
                   "—",
                   "—",
                   "—",
@@ -40678,12 +40935,23 @@ function StatsTab() {
                   "—",
                   "—",
                   "—",
-                  "0.396***",
-                  "(0.142)",
+                  "0.397***",
+                  "(0.131)",
                   "—",
                   "—",
                 ],
-                ["gov_com", "—", "—", "—", "—", "—", "—", "0.293", "(0.196)"],
+                ["gov_com", "—", "—", "—", "—", "—", "—", "0.220", "(0.183)"],
+                [
+                  "Constant",
+                  "8.748",
+                  "(14.799)",
+                  "-11.060",
+                  "(15.559)",
+                  "16.862",
+                  "(19.223)",
+                  "17.523",
+                  "(26.169)",
+                ],
               ].map(([var_, v1, se1, v2, se2, v3, se3, v4, se4], i) => (
                 <tr
                   key={var_}
@@ -40734,9 +41002,9 @@ function StatsTab() {
               {[
                 ["Controls", "Yes", "Yes", "Yes", "Yes"],
                 ["Year FE", "Yes", "Yes", "Yes", "Yes"],
-                ["Observations", "820", "820", "818", "820"],
-                ["R-squared", "0.168", "0.304", "0.121", "0.012"],
-                ["# Firms", "283", "283", "283", "283"],
+                ["Observations", "877", "877", "875", "877"],
+                ["R-squared", "0.165", "0.293", "0.122", "0.008"],
+                ["# Firms", "303", "303", "303", "303"],
               ].map(([l, ...vals]) => (
                 <tr
                   key={l}
@@ -40773,9 +41041,26 @@ function StatsTab() {
             </tbody>
           </table>
         </div>
-        <div style={{ color: "#64748b", fontSize: 10, marginBottom: 12 }}>
-          Robust standard errors in parentheses. *** p&lt;0.01. Firm fixed
-          effects included. Source: Authors' calculations.
+        <div
+          style={{
+            color: "#64748b",
+            fontSize: 10,
+            marginBottom: 14,
+            lineHeight: 1.6,
+          }}
+        >
+          <strong style={{ color: "#334155" }}>Notes:</strong> The table reports
+          panel regression estimates of the relationship between ESG
+          communication intensity and ESG performance. The dependent variables
+          are the overall ESG score and its three pillars (environmental,
+          social, and governance) obtained from Refinitiv. The key independent
+          variables are the corresponding ESG communication measures derived
+          from textual analysis of firms' annual reports. All specifications
+          include firm-level control variables, namely return on assets (ROA),
+          firm size (ln_marketcap), market-to-book ratio (mtb), and firm revenue
+          (ln_revenue), as well as year fixed effects. Robust standard errors
+          are reported in parentheses. Significance levels are denoted as *** p
+          &lt; 0.01, ** p &lt; 0.05, and * p &lt; 0.10.
         </div>
         <div
           style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}
@@ -41058,22 +41343,6 @@ function GWTab() {
               >
                 <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                 <XAxis
-                  dataKey="z_com"
-                  type="number"
-                  domain={[-4, 4]}
-                  name="Z(ESG Com.)"
-                  tick={{ fill: "#94a3b8", fontSize: 9 }}
-                  axisLine={{ stroke: "#334155" }}
-                  tickLine={false}
-                  label={{
-                    value: "Standardized ESG Communication",
-                    position: "insideBottom",
-                    offset: -14,
-                    fill: "#64748b",
-                    fontSize: 10,
-                  }}
-                />
-                <YAxis
                   dataKey="z_esg"
                   type="number"
                   domain={[-4, 4]}
@@ -41083,6 +41352,22 @@ function GWTab() {
                   tickLine={false}
                   label={{
                     value: "Standardized ESG Score",
+                    position: "insideBottom",
+                    offset: -14,
+                    fill: "#64748b",
+                    fontSize: 10,
+                  }}
+                />
+                <YAxis
+                  dataKey="z_com"
+                  type="number"
+                  domain={[-4, 4]}
+                  name="Z(ESG Com.)"
+                  tick={{ fill: "#94a3b8", fontSize: 9 }}
+                  axisLine={{ stroke: "#334155" }}
+                  tickLine={false}
+                  label={{
+                    value: "Standardized ESG Communication",
                     angle: -90,
                     position: "insideLeft",
                     fill: "#64748b",
@@ -41413,40 +41698,64 @@ function GWTab() {
                 >
                   {quad}
                 </div>
+                <div
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "25px 1fr 60px 60px 60px",
+                    gap: 8,
+                    padding: "4px 10px",
+                    background: "#f8fafc",
+                    borderBottom: "1px solid #e2e8f0",
+                    fontSize: 8,
+                    fontWeight: 700,
+                    color: "#64748b",
+                    textAlign: "center",
+                  }}
+                >
+                  <div>#</div>
+                  <div style={{ textAlign: "left" }}>Company</div>
+                  <div>z_esg</div>
+                  <div>z_com</div>
+                  <div>gw_gap</div>
+                </div>
                 {firms.map((f, i) => (
                   <div
                     key={i}
                     style={{
-                      display: "flex",
-                      alignItems: "center",
+                      display: "grid",
+                      gridTemplateColumns: "25px 1fr 60px 60px 60px",
                       gap: 8,
                       padding: "6px 10px",
                       borderBottom: "1px solid #f1f5f9",
                       background: i % 2 === 0 ? "#fff" : "#fafafa",
+                      alignItems: "center",
                     }}
                   >
                     <span
                       style={{
                         color: "#94a3b8",
                         fontSize: 9,
-                        minWidth: 18,
                         fontWeight: 700,
+                        textAlign: "center",
                       }}
                     >
                       #{i + 1}
                     </span>
-                    <div style={{ flex: 1 }}>
+                    <div style={{ overflow: "hidden" }}>
                       <div
                         style={{
                           color: "#1e3a5f",
                           fontSize: 9,
                           fontWeight: 700,
                           lineHeight: 1.2,
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
                         }}
                       >
                         {f.co}
                       </div>
-                      <div style={{ display: "flex", gap: 3, marginTop: 1 }}>
+                      <div style={{ display: "flex", gap: 2, marginTop: 1 }}>
                         <Badge
                           text={SHORT[f.sector] || f.sector}
                           color="#64748b"
@@ -41459,13 +41768,34 @@ function GWTab() {
                     </div>
                     <span
                       style={{
+                        color: "#1e3a5f",
+                        fontWeight: 700,
+                        fontSize: 10,
+                        textAlign: "center",
+                      }}
+                    >
+                      {fmt(f.z_esg, 2)}
+                    </span>
+                    <span
+                      style={{
+                        color: "#1e3a5f",
+                        fontWeight: 700,
+                        fontSize: 10,
+                        textAlign: "center",
+                      }}
+                    >
+                      {fmt(f.z_com, 2)}
+                    </span>
+                    <span
+                      style={{
                         color: f.gw_gap > 0 ? "#dc2626" : "#0d9488",
                         fontWeight: 700,
                         fontSize: 10,
+                        textAlign: "center",
                       }}
                     >
                       {f.gw_gap > 0 ? "+" : ""}
-                      {fmt(f.gw_gap, 3)}
+                      {fmt(f.gw_gap, 2)}
                     </span>
                   </div>
                 ))}
