@@ -37975,6 +37975,55 @@ const ESGLegend = ({ payload }) => {
     </div>
   );
 };
+const PILLARS = [
+  { key: "Environmental", short: "E", color: C.env },
+  { key: "Social", short: "S", color: C.soc },
+  { key: "Governance", short: "G", color: C.gov },
+];
+const usePillarToggle = () => {
+  const [vis, setVis] = useState(
+    new Set(["Environmental", "Social", "Governance"]),
+  );
+  const toggle = (key) => {
+    setVis((prev) => {
+      const next = new Set(prev);
+      if (next.has(key) && next.size > 1) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
+  return [vis, toggle];
+};
+const PillarToggle = ({ visible, onToggle }) => (
+  <div
+    style={{ display: "flex", gap: 5, justifyContent: "flex-end", marginBottom: 6 }}
+  >
+    {PILLARS.map(({ key, short, color }) => {
+      const active = visible.has(key);
+      return (
+        <button
+          key={key}
+          onClick={() => onToggle(key)}
+          title={key}
+          style={{
+            padding: "2px 10px",
+            borderRadius: 12,
+            border: `1.5px solid ${color}`,
+            background: active ? color : "transparent",
+            color: active ? "#fff" : color,
+            fontSize: 11,
+            fontWeight: 700,
+            cursor: "pointer",
+            transition: "all 0.15s",
+            lineHeight: 1.6,
+          }}
+        >
+          {short}
+        </button>
+      );
+    })}
+  </div>
+);
 // Custom legend that always renders Main Market before ACE Market
 const MKT_ORDER = { "Main Market": 0, Main: 0, "ACE Market": 1, ACE: 1 };
 const MarketLegend = ({ payload }) => {
@@ -38033,8 +38082,271 @@ const TabBtn = ({ active, onClick, children }) => (
   </button>
 );
 
+function AboutTab() {
+  const steps = [
+    {
+      num: "01",
+      title: "Sample Construction",
+      text: "621 Shariah-compliant firms listed on Bursa Malaysia (Main Market and ACE Market) were selected, forming a balanced panel of 1,863 firm-year observations across 2022, 2023, and 2024.",
+      color: C.env,
+    },
+    {
+      num: "02",
+      title: "ESG Communication Scoring",
+      text: "Textual ESG communication intensity was measured from firms' annual reports using a keyword-based scoring methodology across three pillars — Environmental, Social, and Governance — normalised as a percentage of total word count.",
+      color: C.soc,
+    },
+    {
+      num: "03",
+      title: "ESG Performance Benchmarking",
+      text: "Externally assessed ESG performance scores were sourced from Refinitiv (now LSEG). These scores serve as an independent benchmark against which communication intensity is compared.",
+      color: C.gov,
+    },
+    {
+      num: "04",
+      title: "Panel Regression Analysis",
+      text: "Fixed-effects panel regression was applied to estimate the relationship between ESG communication intensity and ESG performance scores, controlling for firm-level time-invariant characteristics and isolating within-firm variation over time.",
+      color: C.main,
+    },
+    {
+      num: "05",
+      title: "Greenwashing Gap Analysis",
+      text: "A greenwashing proxy (GW_Gap) was constructed as the standardised difference between ESG communication intensity and ESG performance scores. Positive values indicate over-communication; negative values indicate under-communication.",
+      color: "#f59e0b",
+    },
+  ];
+
+  const keyStats = [
+    { label: "Firms", value: "621", sub: "Shariah-listed, Bursa Malaysia" },
+    { label: "Observations", value: "1,863", sub: "Balanced panel (3 years)" },
+    { label: "Period", value: "2022–2024", sub: "Annual reports" },
+    { label: "Sectors", value: "13", sub: "Across Main & ACE Markets" },
+    { label: "ESG Pillars", value: "3", sub: "Environmental · Social · Governance" },
+    { label: "Performance Data", value: "Refinitiv", sub: "LSEG ESG Scores" },
+  ];
+
+  const scope = [
+    "The sample is limited to Shariah-compliant firms on Bursa Malaysia and may not generalise to conventional firms or other markets.",
+    "ESG communication is measured by textual intensity (keyword frequency), not by disclosure quality, depth, or third-party verification.",
+    "ESG performance scores rely on Refinitiv's methodology. Divergence across rating providers is well-documented and may affect results.",
+    "The study period (2022–2024) predates full implementation of IFRS Sustainability Disclosure Standards in Malaysia.",
+    "The greenwashing gap is a structured proxy and does not constitute direct evidence of intentional misrepresentation.",
+  ];
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+      {/* Header banner */}
+      <div
+        style={{
+          background: "linear-gradient(135deg,#1e3a5f 0%,#0d4f6b 100%)",
+          borderRadius: 12,
+          padding: 28,
+        }}
+      >
+        <div
+          style={{
+            color: "#93c5fd",
+            fontSize: 10,
+            fontWeight: 700,
+            letterSpacing: 1.5,
+            textTransform: "uppercase",
+            marginBottom: 8,
+          }}
+        >
+          About This Dashboard
+        </div>
+        <div
+          style={{ color: "#fff", fontSize: 18, fontWeight: 700, marginBottom: 10 }}
+        >
+          ESG Communication Dynamics Among Malaysian Shariah-Listed Firms
+        </div>
+        <div style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.8 }}>
+          This dashboard presents the findings of a study examining how 621
+          Shariah-compliant firms listed on Bursa Malaysia communicate ESG
+          information in their annual reports, and whether that communication
+          aligns with externally assessed ESG performance. The analysis covers
+          2022–2024 using textual scoring, panel regression, and a greenwashing
+          gap framework.
+        </div>
+      </div>
+
+      {/* Key stats row */}
+      <div style={{ display: "flex", gap: 12 }}>
+        {keyStats.map((s) => (
+          <KPI key={s.label} label={s.label} value={s.value} sub={s.sub} color="#1e3a5f" />
+        ))}
+      </div>
+
+      {/* Methodology steps */}
+      <Card>
+        <SecTitle title="Methodology" sub="Five-step research design" />
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {steps.map((s) => (
+            <div
+              key={s.num}
+              style={{
+                display: "flex",
+                gap: 14,
+                alignItems: "flex-start",
+                background: "#f8fafc",
+                border: `1.5px solid #e2e8f0`,
+                borderLeft: `4px solid ${s.color}`,
+                borderRadius: 8,
+                padding: "12px 14px",
+              }}
+            >
+              <div
+                style={{
+                  fontSize: 20,
+                  fontWeight: 800,
+                  color: s.color,
+                  opacity: 0.3,
+                  lineHeight: 1,
+                  minWidth: 28,
+                  flexShrink: 0,
+                }}
+              >
+                {s.num}
+              </div>
+              <div>
+                <div
+                  style={{
+                    fontWeight: 700,
+                    fontSize: 12,
+                    color: "#1e3a5f",
+                    marginBottom: 4,
+                  }}
+                >
+                  {s.title}
+                </div>
+                <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.7 }}>
+                  {s.text}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* Data sources & scope side by side */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+        <Card>
+          <SecTitle title="Data Sources" sub="Primary inputs to the analysis" />
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            {[
+              {
+                src: "Bursa Malaysia",
+                desc: "Annual reports of 621 Shariah-listed firms (2022–2024) used for textual ESG communication scoring.",
+                color: C.env,
+              },
+              {
+                src: "Refinitiv (LSEG)",
+                desc: "External ESG performance scores used as the independent benchmark for communication–performance alignment.",
+                color: C.soc,
+              },
+              {
+                src: "Securities Commission Malaysia",
+                desc: "Shariah-compliance status and listing segment classification (Main Market / ACE Market).",
+                color: C.gov,
+              },
+            ].map((d) => (
+              <div
+                key={d.src}
+                style={{
+                  display: "flex",
+                  gap: 10,
+                  alignItems: "flex-start",
+                  padding: "10px 12px",
+                  background: "#f8fafc",
+                  borderLeft: `3px solid ${d.color}`,
+                  borderRadius: 6,
+                }}
+              >
+                <div>
+                  <div
+                    style={{ fontWeight: 700, fontSize: 11, color: "#1e3a5f", marginBottom: 3 }}
+                  >
+                    {d.src}
+                  </div>
+                  <div style={{ fontSize: 11, color: "#64748b", lineHeight: 1.6 }}>
+                    {d.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
+
+        <Card>
+          <SecTitle title="Scope & Limitations" sub="Boundaries of the study" />
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 9,
+            }}
+          >
+            {scope.map((l, i) => (
+              <li key={i} style={{ fontSize: 11, color: "#475569", lineHeight: 1.7 }}>
+                {l}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      </div>
+
+      {/* Dashboard navigation guide */}
+      <Card>
+        <SecTitle title="Dashboard Guide" sub="What each tab contains" />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: 10,
+          }}
+        >
+          {[
+            { tab: "📊 Overview", desc: "Year-on-year ESG growth and pillar comparison across 2022–2024." },
+            { tab: "🌿 Pillars", desc: "E, S, G pillar breakdown — intensity trends and pillar share." },
+            { tab: "🏛️ Market", desc: "Main Market vs ACE Market — ESG levels and pillar differences." },
+            { tab: "🏭 Sectors", desc: "Sector-level rankings, growth rates, quadrant positioning, and trends." },
+            { tab: "📈 Distribution", desc: "Histogram and statistics of ESG communication intensity across all firm-years." },
+            { tab: "🔍 Data Explorer", desc: "Firm-level data table with filtering and sorting." },
+            { tab: "☪️ Shariah–ESG", desc: "ESG pillar profile and market comparison for Shariah-listed firms." },
+            { tab: "📐 Statistical Analysis", desc: "Fixed-effects regression results — communication vs performance by pillar." },
+            { tab: "⚠️ Greenwashing", desc: "Greenwashing gap analysis — over- and under-communicating firms and sectors." },
+            { tab: "💡 Recommendations", desc: "Report conclusions, implications, limitations, and future research." },
+          ].map((g) => (
+            <div
+              key={g.tab}
+              style={{
+                background: "#f8fafc",
+                border: "1px solid #e2e8f0",
+                borderRadius: 8,
+                padding: "10px 12px",
+              }}
+            >
+              <div
+                style={{ fontWeight: 700, fontSize: 11, color: "#1e3a5f", marginBottom: 4 }}
+              >
+                {g.tab}
+              </div>
+              <div style={{ fontSize: 10, color: "#64748b", lineHeight: 1.6 }}>
+                {g.desc}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
+    </div>
+  );
+}
+
 function OverviewTab() {
   const yd = AGG.year_data;
+  const [visOv, toggleOv] = usePillarToggle();
   const growthData = yd.map((d) => ({
     year: String(d.year),
     growth: d.growth,
@@ -38302,6 +38614,7 @@ function OverviewTab() {
           title="Pillar Comparison Across Years (2022–2024)"
           sub="All pillars show steady growth, with Environmental communication seeing the largest proportional increase"
         />
+        <PillarToggle visible={visOv} onToggle={toggleOv} />
         <ResponsiveContainer width="100%" height={180}>
           <BarChart data={pillarBar} barGap={6}>
             <CartesianGrid
@@ -38323,9 +38636,9 @@ function OverviewTab() {
             />
             <Tooltip content={<Tip />} />
             <Legend content={<ESGLegend />} />
-            <Bar dataKey="Environmental" fill={C.env} radius={[4, 4, 0, 0]} />
-            <Bar dataKey="Social" fill={C.soc} radius={[4, 4, 0, 0]} />
-            <Bar dataKey="Governance" fill={C.gov} radius={[4, 4, 0, 0]} />
+            {visOv.has("Environmental") && <Bar dataKey="Environmental" fill={C.env} radius={[4, 4, 0, 0]} />}
+            {visOv.has("Social") && <Bar dataKey="Social" fill={C.soc} radius={[4, 4, 0, 0]} />}
+            {visOv.has("Governance") && <Bar dataKey="Governance" fill={C.gov} radius={[4, 4, 0, 0]} />}
           </BarChart>
         </ResponsiveContainer>
         <div
@@ -38361,6 +38674,7 @@ function OverviewTab() {
 
 function PillarsTab() {
   const yd = AGG.year_data;
+  const [visPl, togglePl] = usePillarToggle();
   const pc = AGG.pillar_contrib; // already E,S,G order
   const pillarTrend = yd.map((d) => ({
     year: String(d.year),
@@ -38408,6 +38722,7 @@ function PillarsTab() {
             title="E · S · G Intensity Trend (2022–2024)"
             sub="Governance dominates baseline; Environmental shows strongest 60% growth"
           />
+          <PillarToggle visible={visPl} onToggle={togglePl} />
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={pillarTrend}>
               <CartesianGrid
@@ -38430,27 +38745,33 @@ function PillarsTab() {
               />
               <Tooltip content={<Tip />} />
               <Legend content={<ESGLegend />} />
-              <Line
-                type="monotone"
-                dataKey="Environmental"
-                stroke={C.env}
-                strokeWidth={3}
-                dot={{ r: 5, fill: C.env, stroke: "#fff", strokeWidth: 2 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Social"
-                stroke={C.soc}
-                strokeWidth={3}
-                dot={{ r: 5, fill: C.soc, stroke: "#fff", strokeWidth: 2 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Governance"
-                stroke={C.gov}
-                strokeWidth={3}
-                dot={{ r: 5, fill: C.gov, stroke: "#fff", strokeWidth: 2 }}
-              />
+              {visPl.has("Environmental") && (
+                <Line
+                  type="monotone"
+                  dataKey="Environmental"
+                  stroke={C.env}
+                  strokeWidth={3}
+                  dot={{ r: 5, fill: C.env, stroke: "#fff", strokeWidth: 2 }}
+                />
+              )}
+              {visPl.has("Social") && (
+                <Line
+                  type="monotone"
+                  dataKey="Social"
+                  stroke={C.soc}
+                  strokeWidth={3}
+                  dot={{ r: 5, fill: C.soc, stroke: "#fff", strokeWidth: 2 }}
+                />
+              )}
+              {visPl.has("Governance") && (
+                <Line
+                  type="monotone"
+                  dataKey="Governance"
+                  stroke={C.gov}
+                  strokeWidth={3}
+                  dot={{ r: 5, fill: C.gov, stroke: "#fff", strokeWidth: 2 }}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
           <div
@@ -38483,29 +38804,87 @@ function PillarsTab() {
         <Card>
           <SecTitle
             title="Pillar Contribution to Total ESG"
-            sub="Share of each pillar in total ESG communication intensity"
+            sub="Governance dominates — share and intensity by pillar"
           />
-          <ResponsiveContainer width="100%" height={250}>
-            <PieChart>
-              <Pie
-                data={pc}
-                dataKey="pct"
-                nameKey="name"
-                cx="50%"
-                cy="50%"
-                outerRadius={90}
-                innerRadius={50}
-                label={({ name, pct: v }) => `${name.slice(0, 3)}: ${v}%`}
-                labelLine={true}
-              >
-                {pc.map((e, i) => (
-                  <Cell key={i} fill={e.color} />
-                ))}
-              </Pie>
-              <Tooltip formatter={(v, name) => [v + "%", name]} />
-              <Legend content={<ESGLegend />} />
-            </PieChart>
-          </ResponsiveContainer>
+          <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
+            <div style={{ flex: "0 0 48%" }}>
+              <ResponsiveContainer width="100%" height={220}>
+                <PieChart>
+                  <Pie
+                    data={pc}
+                    dataKey="pct"
+                    nameKey="name"
+                    cx="50%"
+                    cy="50%"
+                    outerRadius={85}
+                    innerRadius={46}
+                    label={({ name, pct: v }) => `${name.slice(0, 3)}: ${v}%`}
+                    labelLine={true}
+                  >
+                    {pc.map((e, i) => (
+                      <Cell key={i} fill={e.color} />
+                    ))}
+                  </Pie>
+                  <Tooltip formatter={(v, name) => [v + "%", name]} />
+                </PieChart>
+              </ResponsiveContainer>
+            </div>
+            <div
+              style={{
+                flex: 1,
+                display: "flex",
+                flexDirection: "column",
+                gap: 14,
+              }}
+            >
+              {pc.map((p) => (
+                <div key={p.name}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      marginBottom: 5,
+                    }}
+                  >
+                    <span
+                      style={{
+                        color: "#334155",
+                        fontSize: 13,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {p.name}
+                    </span>
+                    <span
+                      style={{ color: p.color, fontWeight: 700, fontSize: 13 }}
+                    >
+                      {p.pct}%{" "}
+                      <span style={{ color: "#94a3b8", fontSize: 11 }}>
+                        ({pct(p.avg)} avg)
+                      </span>
+                    </span>
+                  </div>
+                  <div
+                    style={{
+                      background: "#f1f5f9",
+                      borderRadius: 5,
+                      height: 10,
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: `${(p.pct / 50) * 100}%`,
+                        height: "100%",
+                        background: p.color,
+                        borderRadius: 5,
+                        transition: "width 0.8s",
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           <div
             style={{
               marginTop: 12,
@@ -38528,89 +38907,12 @@ function PillarsTab() {
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
               <b>Governance leads ESG communication at 42%</b> (avg 10.98),
               while Environmental (30%, avg 7.89) and Social (27%, avg 7.14)
-              follow—reflecting firms' prioritization hierarchy.
+              follow — reflecting firms' G-first prioritization hierarchy across
+              all three pillars.
             </div>
           </div>
         </Card>
       </div>
-
-      <Card>
-        <SecTitle
-          title="Governance Dominance — E · S · G Progress"
-          sub="Share and average intensity — Governance consistently leads"
-        />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 14,
-            marginTop: 8,
-          }}
-        >
-          {pc.map((p) => (
-            <div key={p.name}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  marginBottom: 5,
-                }}
-              >
-                <span
-                  style={{ color: "#334155", fontSize: 13, fontWeight: 600 }}
-                >
-                  {p.name}
-                </span>
-                <span style={{ color: p.color, fontWeight: 700, fontSize: 13 }}>
-                  {p.pct}%{" "}
-                  <span style={{ color: "#94a3b8", fontSize: 11 }}>
-                    ({pct(p.avg)} avg)
-                  </span>
-                </span>
-              </div>
-              <div
-                style={{ background: "#f1f5f9", borderRadius: 5, height: 10 }}
-              >
-                <div
-                  style={{
-                    width: `${(p.pct / 50) * 100}%`,
-                    height: "100%",
-                    background: p.color,
-                    borderRadius: 5,
-                    transition: "width 0.8s",
-                  }}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        <div
-          style={{
-            marginTop: 16,
-            background: "#fef9f0",
-            border: "1px solid #fde68a",
-            borderRadius: 8,
-            padding: 12,
-          }}
-        >
-          <div
-            style={{
-              color: "#92400e",
-              fontWeight: 700,
-              fontSize: 11,
-              marginBottom: 5,
-            }}
-          >
-            Key Insight
-          </div>
-          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            Governance dominates with 42.2% share (avg 11.0). Environmental
-            (30.3%, avg 7.9) and Social (27.4%, avg 7.1) follow. This 42-30-27
-            composition reflects firms' prioritization hierarchy across the
-            three pillars.
-          </div>
-        </div>
-      </Card>
     </div>
   );
 }
@@ -38619,6 +38921,7 @@ function MarketTab() {
   const mkt = AGG.mkt_data;
   const mktYr = EX.mkt_yr_trend;
   const sm = EX.sec_mkt_counts;
+  const [visMkt, toggleMkt] = usePillarToggle();
   const main = mkt.find((m) => m.market === "MAIN");
   const ace = mkt.find((m) => m.market === "ACE");
 
@@ -38825,6 +39128,7 @@ function MarketTab() {
             title="Main Market: E · S · G Pillar Trends"
             sub="Main Market shows strong growth across all pillars, with Environmental leading 60% increase"
           />
+          <PillarToggle visible={visMkt} onToggle={toggleMkt} />
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={mainPillar}>
               <CartesianGrid
@@ -38846,27 +39150,33 @@ function MarketTab() {
               />
               <Tooltip content={<Tip />} />
               <Legend content={<ESGLegend />} />
-              <Line
-                type="monotone"
-                dataKey="Environmental"
-                stroke={C.env}
-                strokeWidth={2}
-                dot={{ r: 4 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Social"
-                stroke={C.soc}
-                strokeWidth={2}
-                dot={{ r: 4 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Governance"
-                stroke={C.gov}
-                strokeWidth={2}
-                dot={{ r: 4 }}
-              />
+              {visMkt.has("Environmental") && (
+                <Line
+                  type="monotone"
+                  dataKey="Environmental"
+                  stroke={C.env}
+                  strokeWidth={2}
+                  dot={{ r: 4 }}
+                />
+              )}
+              {visMkt.has("Social") && (
+                <Line
+                  type="monotone"
+                  dataKey="Social"
+                  stroke={C.soc}
+                  strokeWidth={2}
+                  dot={{ r: 4 }}
+                />
+              )}
+              {visMkt.has("Governance") && (
+                <Line
+                  type="monotone"
+                  dataKey="Governance"
+                  stroke={C.gov}
+                  strokeWidth={2}
+                  dot={{ r: 4 }}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
           <div
@@ -38901,6 +39211,7 @@ function MarketTab() {
             title="ACE Market: E · S · G Pillar Trends"
             sub="ACE Market accelerates dramatically—Environmental and Social grow 80%+, nearly catching Main Market"
           />
+          <PillarToggle visible={visMkt} onToggle={toggleMkt} />
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={acePillar}>
               <CartesianGrid
@@ -38922,27 +39233,33 @@ function MarketTab() {
               />
               <Tooltip content={<Tip />} />
               <Legend content={<ESGLegend />} />
-              <Line
-                type="monotone"
-                dataKey="Environmental"
-                stroke={C.env}
-                strokeWidth={2}
-                dot={{ r: 4 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Social"
-                stroke={C.soc}
-                strokeWidth={2}
-                dot={{ r: 4 }}
-              />
-              <Line
-                type="monotone"
-                dataKey="Governance"
-                stroke={C.gov}
-                strokeWidth={2}
-                dot={{ r: 4 }}
-              />
+              {visMkt.has("Environmental") && (
+                <Line
+                  type="monotone"
+                  dataKey="Environmental"
+                  stroke={C.env}
+                  strokeWidth={2}
+                  dot={{ r: 4 }}
+                />
+              )}
+              {visMkt.has("Social") && (
+                <Line
+                  type="monotone"
+                  dataKey="Social"
+                  stroke={C.soc}
+                  strokeWidth={2}
+                  dot={{ r: 4 }}
+                />
+              )}
+              {visMkt.has("Governance") && (
+                <Line
+                  type="monotone"
+                  dataKey="Governance"
+                  stroke={C.gov}
+                  strokeWidth={2}
+                  dot={{ r: 4 }}
+                />
+              )}
             </LineChart>
           </ResponsiveContainer>
           <div
@@ -39185,10 +39502,11 @@ function SectorsTab() {
               intensity (~31–32%), likely driven by regulatory scrutiny and
               resource-intensive operations. <strong>Financial Services</strong>{" "}
               ranks 3rd in level but grew only +1.64pp — the slowest of all
-              sectors — signalling a potential plateau. <strong>Technology</strong>{" "}
-              and <strong>Telecoms</strong> trail at the bottom (~24%), revealing
-              a gap of ~7.8pp between top and bottom sectors that highlights
-              uneven ESG disclosure maturity across industries.
+              sectors — signalling a potential plateau.{" "}
+              <strong>Technology</strong> and <strong>Telecoms</strong> trail at
+              the bottom (~24%), revealing a gap of ~7.8pp between top and
+              bottom sectors that highlights uneven ESG disclosure maturity
+              across industries.
             </div>
           </div>
         </Card>
@@ -39267,6 +39585,148 @@ function SectorsTab() {
           </div>
         </Card>
       </div>
+
+      <Card>
+        <SecTitle
+          title="Sector Growth Ranking — Relative Growth Rate (2022–2024)"
+          sub="Percentage change in ESG communication intensity, sorted fastest to slowest"
+        />
+        <ResponsiveContainer width="100%" height={310}>
+          <BarChart
+            data={[...sd]
+              .sort((a, b) => b.growth_pct - a.growth_pct)
+              .map((d) => ({
+                sector: SHORT[d.sector] || d.sector,
+                growth_pct: d.growth_pct,
+                y2022: d.y2022,
+                y2024: d.y2024,
+                raw: d,
+              }))}
+            layout="vertical"
+            barSize={14}
+            margin={{ left: 0, right: 50 }}
+          >
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="#f1f5f9"
+              horizontal={false}
+            />
+            <XAxis
+              type="number"
+              domain={[0, 50]}
+              tick={{ fill: "#94a3b8", fontSize: 9 }}
+              axisLine={false}
+              tickLine={false}
+              tickFormatter={(v) => v + "%"}
+            />
+            <YAxis
+              type="category"
+              dataKey="sector"
+              tick={{ fill: "#475569", fontSize: 9 }}
+              axisLine={false}
+              tickLine={false}
+              width={105}
+            />
+            <Tooltip
+              content={({ active, payload }) => {
+                if (!active || !payload?.length) return null;
+                const d = payload[0].payload;
+                return (
+                  <div
+                    style={{
+                      background: "#fff",
+                      border: "1px solid #e2e8f0",
+                      borderRadius: 8,
+                      padding: "8px 12px",
+                      fontSize: 11,
+                    }}
+                  >
+                    <div style={{ fontWeight: 700, marginBottom: 4 }}>
+                      {d.sector}
+                    </div>
+                    <div>Relative growth: {d.growth_pct}%</div>
+                    <div>2022: {pct(d.y2022)} → 2024: {pct(d.y2024)}</div>
+                  </div>
+                );
+              }}
+            />
+            <Bar dataKey="growth_pct" name="Relative Growth (%)" radius={[0, 4, 4, 0]}>
+              {[...sd]
+                .sort((a, b) => b.growth_pct - a.growth_pct)
+                .map((d, i) => (
+                  <Cell
+                    key={i}
+                    fill={
+                      d.growth_pct >= 40
+                        ? C.env
+                        : d.growth_pct >= 30
+                        ? C.soc
+                        : d.growth_pct >= 20
+                        ? C.main
+                        : "#94a3b8"
+                    }
+                  />
+                ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+        <div
+          style={{
+            marginTop: 10,
+            display: "flex",
+            gap: 16,
+            fontSize: 10,
+            color: "#64748b",
+            justifyContent: "flex-end",
+            flexWrap: "wrap",
+          }}
+        >
+          {[
+            { color: C.env, label: "≥ 40% growth" },
+            { color: C.soc, label: "30–39% growth" },
+            { color: C.main, label: "20–29% growth" },
+            { color: "#94a3b8", label: "< 20% growth" },
+          ].map((t) => (
+            <div key={t.label} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+              <div
+                style={{
+                  width: 10,
+                  height: 10,
+                  borderRadius: 2,
+                  background: t.color,
+                  flexShrink: 0,
+                }}
+              />
+              {t.label}
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            marginTop: 10,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div
+            style={{ color: "#92400e", fontWeight: 700, fontSize: 11, marginBottom: 5 }}
+          >
+            Key Insight
+          </div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            <b>Consumer Products (+44.8%), Construction (+45.1%), and
+            Transportation & Logistics (+41.4%)</b> show the fastest relative
+            growth — sectors starting from lower 2022 baselines that are now
+            rapidly catching up. <b>Financial Services (+6.1%)</b> is the
+            slowest-growing sector, having already plateaued at a high absolute
+            level. This relative ranking differs meaningfully from the absolute
+            pp chart: Energy ranks high in absolute gain but only 5th in
+            relative growth.
+          </div>
+        </div>
+      </Card>
 
       <Card>
         <SecTitle
@@ -39464,10 +39924,11 @@ function SectorsTab() {
             <strong>Key Insight:</strong> Only{" "}
             <strong>Energy and Transportation & Logistics</strong> qualify as{" "}
             <strong>Leaders</strong> — both are resource-intensive sectors under
-            high regulatory pressure. <strong>Utilities, Healthcare, and
-            Plantation</strong> are <strong>Mature</strong>: already high
-            communicators but losing momentum. The largest opportunity lies in
-            the <strong>Catching-up</strong> cluster —{" "}
+            high regulatory pressure.{" "}
+            <strong>Utilities, Healthcare, and Plantation</strong> are{" "}
+            <strong>Mature</strong>: already high communicators but losing
+            momentum. The largest opportunity lies in the{" "}
+            <strong>Catching-up</strong> cluster —{" "}
             <strong>Industrial, Consumer Products, and Construction</strong> —
             which combine lower current levels with the fastest growth rates
             (~9pp). Notably, <strong>Financial Services</strong> is the most
@@ -40526,46 +40987,6 @@ function ShariahTab() {
   ];
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
-      <div
-        style={{
-          background: "linear-gradient(135deg,#1e3a5f,#0d4f6b)",
-          borderRadius: 12,
-          padding: 22,
-          border: "none",
-        }}
-      >
-        <div
-          style={{
-            color: "#93c5fd",
-            fontSize: 10,
-            fontWeight: 700,
-            letterSpacing: 1.5,
-            textTransform: "uppercase",
-            marginBottom: 8,
-          }}
-        >
-          Shariah × ESG Alignment
-        </div>
-        <div
-          style={{
-            color: "#fff",
-            fontSize: 15,
-            fontWeight: 700,
-            marginBottom: 8,
-          }}
-        >
-          Islamic Finance Values Embedded in ESG Communication
-        </div>
-        <div style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.7 }}>
-          Shariah-compliant firms possess a natural ESG advantage — Islamic
-          finance prohibits riba (interest), gharar (excessive uncertainty),
-          maysir (gambling) and haram industries. Governance communication
-          dominates at 42.2% reflecting mandatory Shariah Supervisory Board
-          disclosures. Environmental grew fastest (+62% relative, 2022–2024)
-          aligned with Bursa Malaysia's TCFD mandate and green sukuk frameworks.
-        </div>
-      </div>
-
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle
@@ -40637,9 +41058,9 @@ function ShariahTab() {
               <strong>Key Insight:</strong>{" "}
               <strong>Governance leads all three years</strong> (10.3% → 11.7%)
               but its dominance is narrowing.{" "}
-              <strong>Environmental grew the fastest</strong> at +61.9%
-              (6.0% → 9.8%), followed by Social at +48.5% (5.7% → 8.5%),
-              while Governance grew only +13.7%. In 2022, Governance was nearly{" "}
+              <strong>Environmental grew the fastest</strong> at +61.9% (6.0% →
+              9.8%), followed by Social at +48.5% (5.7% → 8.5%), while
+              Governance grew only +13.7%. In 2022, Governance was nearly{" "}
               <strong>1.8× higher</strong> than Environmental; by 2024 that gap
               has compressed to just <strong>1.2×</strong>. If current growth
               rates hold, E and S pillars could converge with G within the next
@@ -40692,12 +41113,14 @@ function ShariahTab() {
               <strong>unbalanced ESG profile</strong>.{" "}
               <strong>Governance dominates at 11.7%</strong> — 37.7% higher than
               Environmental (9.8%) and 37.5% higher than Social (8.5%). The
-              asymmetric shape reflects a market where firms are most comfortable
-              disclosing board and compliance matters, while{" "}
-              <strong>Environmental and Social reporting remain
-              underdeveloped</strong>. A balanced radar would require E and S to
-              close a ~2–3pp gap, representing a clear target for firms aiming
-              for holistic ESG communication.
+              asymmetric shape reflects a market where firms are most
+              comfortable disclosing board and compliance matters, while{" "}
+              <strong>
+                Environmental and Social reporting remain underdeveloped
+              </strong>
+              . A balanced radar would require E and S to close a ~2–3pp gap,
+              representing a clear target for firms aiming for holistic ESG
+              communication.
             </div>
           </div>
         </Card>
@@ -40758,16 +41181,12 @@ function ShariahTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
-              <strong>Key Insight:</strong> The most counterintuitive finding is
-              that <strong>ACE Market firms score higher on Governance
-              (11.6%) than Main Market firms (10.9%)</strong>, despite being
-              smaller growth-stage companies. However, ACE severely lags on{" "}
-              <strong>Environmental (5.3% vs 8.3%)</strong> and{" "}
-              <strong>Social (5.3% vs 7.4%)</strong> — a gap of ~3pp on each.
-              For ACE firms, Governance accounts for <strong>52% of total
-              ESG communication</strong> versus 41% for Main, revealing a
-              compliance-first mindset where board disclosures are prioritised
-              but environmental and social reporting remains largely undeveloped.
+              <strong>Key Insight:</strong>{" "}
+              <strong>Main Market firms consistently outperform ACE Market firms</strong>{" "}
+              in ESG communication intensity (26.6% vs 22.1%), a 4.5 pp structural
+              gap. The report attributes this to listing segment characteristics —
+              Main Market firms exhibit more uniform disclosure practices across
+              sectors, while ACE Market disclosure is more uneven and selective.
             </div>
           </div>
         </Card>
@@ -41066,7 +41485,7 @@ function StatsTab() {
         <SecTitle
           tag="Table 2"
           title="Impact of ESG Communication on ESG Performance"
-          sub="Panel regression — firm FE + year FE + controls (ROA, MTBR, log market cap, log revenue, quick ratio)"
+          sub="Panel regression — firm FE + year FE + controls (ROA, MTBR, log market cap, log revenue)"
         />
         <div style={{ overflowX: "auto", marginBottom: 14 }}>
           <table
@@ -41582,7 +42001,10 @@ function GWTab() {
                 <ReferenceLine x={0} stroke="#94a3b8" strokeWidth={1} />
                 <ReferenceLine y={0} stroke="#94a3b8" strokeWidth={1} />
                 <ReferenceLine
-                  segment={[{ x: -4, y: -4 }, { x: 4, y: 4 }]}
+                  segment={[
+                    { x: -4, y: -4 },
+                    { x: 4, y: 4 },
+                  ]}
                   stroke="#94a3b8"
                   strokeDasharray="6 3"
                   strokeWidth={1.5}
@@ -42025,6 +42447,266 @@ function GWTab() {
   );
 }
 
+function RecommendationsTab() {
+  const conclusions = [
+    {
+      icon: "📈",
+      title: "ESG Communication Has Grown Substantially",
+      text: "ESG communication intensity increased from 22.05% (2022) to 29.98% (2024) — a 36% relative rise. Environmental themes experienced the fastest expansion, consistent with evolving regulatory expectations and global climate-related disclosure standards.",
+      color: C.env,
+    },
+    {
+      icon: "🔗",
+      title: "Communication Is Positively Linked to Performance",
+      text: "ESG communication intensity is positively associated with ESG performance (β = 0.194, p < 0.01). The association is strongest for the Environmental pillar (β = 0.491) and Social pillar (β = 0.397). The Governance pillar shows no statistically significant association, partly due to limited within-firm variation over time.",
+      color: C.soc,
+    },
+    {
+      icon: "⚠️",
+      title: "Greenwashing Gap Is Measurable and Heterogeneous",
+      text: "The mean greenwashing gap of 0.148 indicates a mild aggregate tendency toward over-communication. Plantation (0.57), Utilities (0.41), and Industrial Products & Services (0.36) show the largest positive gaps. Financial Services (−0.88) and Healthcare (−0.33) under-communicate relative to their assessed ESG performance.",
+      color: "#f59e0b",
+    },
+    {
+      icon: "🏛️",
+      title: "Market Listing Shapes Disclosure Practices",
+      text: "Main Market firms consistently demonstrate higher and more uniform ESG communication intensity (26.6%) compared to ACE Market firms (22.1%). This 4.5 pp structural gap suggests listing segment characteristics play a role in shaping disclosure behaviour, independent of sectoral factors.",
+      color: C.main,
+    },
+  ];
+
+  const implications = [
+    {
+      label: "Regulatory",
+      color: "#1e3a5f",
+      bg: "#eff6ff",
+      border: "#bfdbfe",
+      points: [
+        "As Malaysia transitions toward full implementation of IFRS Sustainability Disclosure Standards under the National Sustainability Reporting Framework (NSRF), improving not only the volume but also the credibility and performance-alignment of ESG disclosures will be critical.",
+        "The measurable greenwashing gap across sectors calls for enhanced verification mechanisms to ensure disclosure quality keeps pace with disclosure quantity.",
+      ],
+    },
+    {
+      label: "Analytical",
+      color: "#065f46",
+      bg: "#f0fdf4",
+      border: "#bbf7d0",
+      points: [
+        "The findings underscore the importance of distinguishing between ESG communication intensity and externally assessed ESG performance. High communication scores do not automatically translate into high ESG outcomes.",
+        "Sector-level analysis is essential — ESG communication strategies are shaped by industry characteristics and exposure profiles, meaning aggregate averages can obscure meaningful heterogeneity.",
+      ],
+    },
+  ];
+
+  const limitations = [
+    "The study covers a balanced panel of 621 Shariah-listed firms over 2022–2024 only; findings may not generalise to all Malaysian listed companies or other markets.",
+    "The Governance pillar shows no significant association with communication intensity, partly because governance disclosure follows a more stable trajectory with limited within-firm variation — fixed-effects models rely on within-firm changes.",
+    "ESG performance is benchmarked against Refinitiv ESG Scores. Substantial divergence across rating providers arises from differences in scope, measurement, and weighting methodologies.",
+    "The greenwashing gap is a structured proxy measure. It does not directly observe intentional misrepresentation and should not be interpreted as definitive evidence of greenwashing behaviour.",
+  ];
+
+  const future = [
+    "Incorporate post-IFRS adoption data to evaluate whether mandatory standards improve the alignment between ESG communication and ESG performance.",
+    "Use alternative ESG rating providers to test sensitivity of the communication–performance relationship to rating methodology differences.",
+    "Pursue longitudinal evaluation of disclosure quality beyond textual intensity — examining depth, specificity, and verifiability of ESG narratives.",
+  ];
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
+      {/* Conclusion banner */}
+      <div
+        style={{
+          background: "linear-gradient(135deg,#1e3a5f 0%,#0d4f6b 100%)",
+          borderRadius: 12,
+          padding: 24,
+        }}
+      >
+        <div
+          style={{
+            color: "#93c5fd",
+            fontSize: 10,
+            fontWeight: 700,
+            letterSpacing: 1.5,
+            textTransform: "uppercase",
+            marginBottom: 8,
+          }}
+        >
+          Report Conclusion
+        </div>
+        <div
+          style={{
+            color: "#fff",
+            fontSize: 15,
+            fontWeight: 700,
+            marginBottom: 10,
+          }}
+        >
+          ESG Communication Among Malaysian Shariah-Listed Firms (2022–2024)
+        </div>
+        <div style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.8 }}>
+          This report provides a comprehensive assessment of ESG communication
+          dynamics among 621 Malaysian Shariah-listed firms over 2022–2024.
+          Communication intensity has increased substantially and systematically,
+          and is positively associated with ESG performance — though the
+          relationship is neither automatic nor uniform across pillars and
+          sectors. Measurable greenwashing gaps persist, and the transition
+          toward IFRS sustainability standards makes improving disclosure
+          credibility and performance-alignment increasingly critical.
+        </div>
+      </div>
+
+      {/* Key conclusions */}
+      <Card>
+        <SecTitle
+          title="Key Conclusions"
+          sub="Core findings from the report"
+        />
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 14,
+          }}
+        >
+          {conclusions.map((c) => (
+            <div
+              key={c.title}
+              style={{
+                background: "#f8fafc",
+                border: `1.5px solid #e2e8f0`,
+                borderLeft: `4px solid ${c.color}`,
+                borderRadius: 8,
+                padding: 14,
+              }}
+            >
+              <div
+                style={{
+                  fontWeight: 700,
+                  fontSize: 12,
+                  color: "#1e3a5f",
+                  marginBottom: 6,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 6,
+                }}
+              >
+                <span>{c.icon}</span> {c.title}
+              </div>
+              <div style={{ fontSize: 11, color: "#475569", lineHeight: 1.7 }}>
+                {c.text}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* Implications */}
+      <Card>
+        <SecTitle
+          title="Implications"
+          sub="Policy and analytical implications drawn from the report"
+        />
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
+          {implications.map((im) => (
+            <div
+              key={im.label}
+              style={{
+                background: im.bg,
+                border: `1px solid ${im.border}`,
+                borderRadius: 8,
+                padding: 14,
+              }}
+            >
+              <div
+                style={{
+                  fontWeight: 700,
+                  fontSize: 11,
+                  color: im.color,
+                  textTransform: "uppercase",
+                  letterSpacing: 1,
+                  marginBottom: 10,
+                }}
+              >
+                {im.label} Implications
+              </div>
+              <ul
+                style={{
+                  margin: 0,
+                  paddingLeft: 16,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 8,
+                }}
+              >
+                {im.points.map((p, i) => (
+                  <li
+                    key={i}
+                    style={{ fontSize: 11, color: "#334155", lineHeight: 1.7 }}
+                  >
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* Limitations & Future Research side by side */}
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+        <Card>
+          <SecTitle
+            title="Limitations"
+            sub="Boundaries of the current study"
+          />
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 10,
+            }}
+          >
+            {limitations.map((l, i) => (
+              <li
+                key={i}
+                style={{ fontSize: 11, color: "#475569", lineHeight: 1.7 }}
+              >
+                {l}
+              </li>
+            ))}
+          </ul>
+        </Card>
+        <Card>
+          <SecTitle
+            title="Future Research Directions"
+            sub="Extensions proposed in the report"
+          />
+          <ul
+            style={{
+              margin: 0,
+              paddingLeft: 16,
+              display: "flex",
+              flexDirection: "column",
+              gap: 10,
+            }}
+          >
+            {future.map((f, i) => (
+              <li
+                key={i}
+                style={{ fontSize: 11, color: "#475569", lineHeight: 1.7 }}
+              >
+                {f}
+              </li>
+            ))}
+          </ul>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [tab, setTab] = useState(0);
   const tabs = [
@@ -42037,6 +42719,7 @@ export default function App() {
     { label: "☪️ Shariah–ESG", comp: <ShariahTab /> },
     { label: "📐 Statistical Analysis", comp: <StatsTab /> },
     { label: "⚠️ Greenwashing", comp: <GWTab /> },
+    { label: "💡 Recommendations", comp: <RecommendationsTab /> },
   ];
   return (
     <div
