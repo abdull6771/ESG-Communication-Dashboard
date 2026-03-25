@@ -40129,6 +40129,32 @@ function SectorsTab() {
             })}
           </div>
         </div>
+        <div
+          style={{
+            marginTop: 12,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div
+            style={{
+              color: "#92400e",
+              fontWeight: 700,
+              fontSize: 11,
+              marginBottom: 5,
+            }}
+          >
+            Key Insight
+          </div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            <b>Sectors follow divergent trajectories</b> — some climb steeply
+            while others plateau or grow modestly, meaning the overall market
+            average masks substantial variation in how quickly individual
+            industries are advancing their ESG disclosure.
+          </div>
+        </div>
       </Card>
 
       <Card>
@@ -40208,6 +40234,33 @@ function SectorsTab() {
               <Badge text={d.firms + " firms"} color="#94a3b8" />
             </div>
           ))}
+        </div>
+        <div
+          style={{
+            marginTop: 12,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div
+            style={{
+              color: "#92400e",
+              fontWeight: 700,
+              fontSize: 11,
+              marginBottom: 5,
+            }}
+          >
+            Key Insight
+          </div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            <b>Governance is the dominant pillar in every sector without
+            exception,</b> confirming the G-first disclosure pattern is
+            structural rather than sector-specific. Environmental communication
+            is highest in resource-intensive industries, reflecting where
+            external pressure most strongly shapes pillar emphasis.
+          </div>
         </div>
       </Card>
     </div>
@@ -40543,6 +40596,27 @@ function DistributionTab() {
               </div>
             ))}
           </div>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> Top communicators are
+              disproportionately concentrated in resource-intensive and
+              regulated sectors, with Main Market firms dominating — suggesting
+              that listing maturity and regulatory exposure are the strongest
+              predictors of elite ESG disclosure.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
@@ -40601,6 +40675,26 @@ function DistributionTab() {
                 </span>
               </div>
             ))}
+          </div>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fff5f5",
+              border: "1px solid #fecaca",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#7f1d1d", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> The bottom communicators span
+              diverse sectors and both markets, indicating that low ESG
+              disclosure is not confined to any single industry — it reflects
+              firm-level choices rather than structural sector constraints.
+            </div>
           </div>
         </Card>
       </div>
@@ -41899,6 +41993,98 @@ function StatsTab() {
           ))}
         </div>
       </Card>
+      <Card>
+        <SecTitle
+          title="Coefficient Plot — Communication → Performance"
+          sub="β estimates with 95% confidence intervals · n.s. = not significant at p < 0.05"
+        />
+        <ResponsiveContainer width="100%" height={200}>
+          <BarChart
+            layout="vertical"
+            data={[
+              { name: "Environmental", beta: 0.491, lo: 0.230, hi: 0.752, col: C.env, sig: true },
+              { name: "Social",        beta: 0.397, lo: 0.140, hi: 0.654, col: C.soc, sig: true },
+              { name: "ESG Overall",   beta: 0.194, lo: 0.108, hi: 0.280, col: "#1e3a5f", sig: true },
+              { name: "Governance",    beta: 0.220, lo: -0.139, hi: 0.579, col: C.gov, sig: false },
+            ]}
+            margin={{ left: 100, right: 60, top: 10, bottom: 10 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" horizontal={false} />
+            <XAxis
+              type="number"
+              domain={[-0.2, 0.85]}
+              tick={{ fill: "#94a3b8", fontSize: 10 }}
+              axisLine={false}
+              tickLine={false}
+              tickFormatter={(v) => v.toFixed(1)}
+            >
+              <ReferenceLine x={0} stroke="#94a3b8" strokeWidth={1} />
+            </XAxis>
+            <YAxis
+              type="category"
+              dataKey="name"
+              tick={{ fill: "#475569", fontSize: 11, fontWeight: 600 }}
+              axisLine={false}
+              tickLine={false}
+              width={95}
+            />
+            <Tooltip
+              content={({ active, payload }) => {
+                if (!active || !payload?.length) return null;
+                const d = payload[0].payload;
+                return (
+                  <div style={{ background: "#1e3a5f", borderRadius: 8, padding: "8px 12px" }}>
+                    <div style={{ color: "#fff", fontWeight: 700, fontSize: 11 }}>{d.name}</div>
+                    <div style={{ color: "#93c5fd", fontSize: 11 }}>β = {d.beta}</div>
+                    <div style={{ color: "#94a3b8", fontSize: 10 }}>95% CI [{d.lo}, {d.hi}]</div>
+                    <div style={{ color: d.sig ? "#4ade80" : "#f87171", fontSize: 10 }}>{d.sig ? "Significant (p < 0.01)" : "Not significant"}</div>
+                  </div>
+                );
+              }}
+            />
+            <Bar dataKey="beta" radius={[0, 4, 4, 0]} isAnimationActive={false}>
+              {[
+                { name: "Environmental", beta: 0.491, lo: 0.230, hi: 0.752, col: C.env, sig: true },
+                { name: "Social",        beta: 0.397, lo: 0.140, hi: 0.654, col: C.soc, sig: true },
+                { name: "ESG Overall",   beta: 0.194, lo: 0.108, hi: 0.280, col: "#1e3a5f", sig: true },
+                { name: "Governance",    beta: 0.220, lo: -0.139, hi: 0.579, col: C.gov, sig: false },
+              ].map((d, i) => (
+                <Cell key={i} fill={d.sig ? d.col : "#cbd5e1"} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+        <div style={{ marginTop: 8, display: "flex", gap: 16, fontSize: 10, color: "#64748b", justifyContent: "flex-end" }}>
+          {[
+            { color: C.env, label: "Significant (p < 0.01)" },
+            { color: "#cbd5e1", label: "Not significant" },
+          ].map((t) => (
+            <div key={t.label} style={{ display: "flex", alignItems: "center", gap: 5 }}>
+              <div style={{ width: 10, height: 10, borderRadius: 2, background: t.color, flexShrink: 0 }} />
+              {t.label}
+            </div>
+          ))}
+        </div>
+        <div
+          style={{
+            marginTop: 10,
+            background: "#fef9f0",
+            border: "1px solid #fde68a",
+            borderRadius: 8,
+            padding: 12,
+          }}
+        >
+          <div style={{ color: "#92400e", fontWeight: 700, fontSize: 11, marginBottom: 5 }}>Key Insight</div>
+          <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+            <b>Environmental and Social communication carry the strongest and
+            most reliable effects on ESG performance,</b> while Governance
+            communication — despite being the most-used pillar — shows no
+            statistically significant relationship with its corresponding score,
+            suggesting that governance disclosures are too standardised to
+            differentiate firm performance.
+          </div>
+        </div>
+      </Card>
     </div>
   );
 }
@@ -42247,6 +42433,27 @@ function GWTab() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        <div
+          style={{
+            marginTop: 12,
+            background: "#f0fdf9",
+            border: "1px solid #99f6e4",
+            borderRadius: 8,
+            padding: "10px 14px",
+            display: "flex",
+            gap: 8,
+            alignItems: "flex-start",
+          }}
+        >
+          <span style={{ fontSize: 14 }}>💡</span>
+          <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+            <strong>Key Insight:</strong> Most firms cluster near the diagonal,
+            indicating broad alignment between what they communicate and how
+            they perform. The meaningful minority above the line — firms whose
+            communication consistently exceeds their scores — represents the
+            clearest candidates for ESG overstatement risk.
           </div>
         </div>
       </Card>
@@ -42771,6 +42978,12 @@ function RecommendationsTab() {
 
 export default function App() {
   const [tab, setTab] = useState(0);
+  const [showTop, setShowTop] = useState(false);
+  React.useEffect(() => {
+    const onScroll = () => setShowTop(window.scrollY > 400);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const tabs = [
     { label: "📊 Overview", comp: <OverviewTab /> },
     { label: "🌿 Pillars", comp: <PillarsTab /> },
@@ -42917,6 +43130,33 @@ export default function App() {
           <Badge text="NLP · Panel Regression" color="#1e3a5f" />
         </div>
       </div>
+      {showTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{
+            position: "fixed",
+            bottom: 28,
+            right: 28,
+            width: 42,
+            height: 42,
+            borderRadius: "50%",
+            background: "#1e3a5f",
+            color: "#fff",
+            border: "none",
+            cursor: "pointer",
+            fontSize: 18,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 14px rgba(30,58,95,0.35)",
+            zIndex: 999,
+            transition: "opacity 0.2s",
+          }}
+          title="Back to top"
+        >
+          ↑
+        </button>
+      )}
     </div>
   );
 }
