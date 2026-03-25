@@ -575,7 +575,7 @@ export const EX =
   ],
 };
 
-const C = {
+export const C = {
   env: "#0d9488",
   soc: "#2563eb",
   gov: "#7c3aed",

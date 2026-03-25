@@ -26,7 +26,7 @@ import {
 
 import RAW from "./src/data/rawData.js";
 import AGG from "./src/data/aggData.js";
-import { EX, SHORT } from "./src/data/exData.js";
+import { EX, SHORT, C } from "./src/data/exData.js";
 
 const QUAD_COLORS = {
   "Aligned Leaders": "#0d9488",
