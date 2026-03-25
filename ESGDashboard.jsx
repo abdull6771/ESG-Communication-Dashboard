@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   LineChart,
   Line,
@@ -5222,7 +5222,7 @@ function RecommendationsTab() {
 export default function App() {
   const [tab, setTab] = useState(0);
   const [showTop, setShowTop] = useState(false);
-  React.useEffect(() => {
+  useEffect(() => {
     const onScroll = () => setShowTop(window.scrollY > 400);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);

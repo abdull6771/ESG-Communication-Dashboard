@@ -1,7 +1,12 @@
 import ESGDashboard from "../ESGDashboard";
+import ErrorBoundary from "./ErrorBoundary";
 
 function App() {
-  return <ESGDashboard />;
+  return (
+    <ErrorBoundary>
+      <ESGDashboard />
+    </ErrorBoundary>
+  );
 }
 
 export default App;
