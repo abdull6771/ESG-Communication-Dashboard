@@ -38563,6 +38563,26 @@ function OverviewTab() {
               </div>
             ))}
           </div>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> ESG communication intensity has
+              risen consistently across all three years, indicating a
+              broad-based shift in disclosure behaviour rather than isolated
+              improvement among a few firms.
+            </div>
+          </div>
         </Card>
         <Card>
           <SecTitle
