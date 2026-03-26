@@ -927,9 +927,11 @@ function OverviewTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> ESG communication growth remains
-              strong across the observation period, reflecting a sustained and
-              broad-based increase in disclosure practices among firms.
+              <strong>Key Insight:</strong> The data confirms a broad-based
+              shift in disclosure behavior over the observation period,
+              indicating that the sustained upward trajectory in ESG
+              communication is shared across the broader market as practices
+              broadly institutionalize.
             </div>
           </div>
         </Card>
@@ -993,10 +995,11 @@ function OverviewTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>All three ESG pillars increase steadily over the period,</b> with
-            Governance remaining the dominant component, Environmental
-            communication showing the fastest growth, and Social communication
-            rising progressively.
+            <b>All three pillars are advancing simultaneously,</b> but they do
+            so from differentiated starting points. Governance anchors the
+            highest baseline, while Environmental communication shows the
+            strongest proportional acceleration — reflecting rising corporate
+            attention to climate and climate-related disclosure obligations.
           </div>
         </div>
       </Card>
@@ -1052,7 +1055,6 @@ function PillarsTab() {
         <Card>
           <SecTitle
             title="E · S · G Intensity Trend (2022–2024)"
-            sub="Governance dominates baseline; Environmental shows strongest 60% growth"
           />
           <PillarToggle visible={visPl} onToggle={togglePl} />
           <ResponsiveContainer width="100%" height={250}>
@@ -1126,7 +1128,13 @@ function PillarsTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Governance communication remains the largest and relatively stable component</b> over time, while Environmental and Social communication increase steadily across the period.
+              <b>
+                Governance-related disclosure follows a more stable trajectory
+              </b>
+              compared to Environmental and Social communication, exhibiting
+              smaller year-on-year changes. Environmental and Social are closing
+              the gap, but the pillar hierarchy remains persistent — a pattern
+              also noted in Schimanski et al. (2024).
             </div>
           </div>
         </Card>
