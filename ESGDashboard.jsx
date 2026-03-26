@@ -927,11 +927,9 @@ function OverviewTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> The data confirms a broad-based
-              shift in disclosure behavior over the observation period,
-              indicating that the sustained upward trajectory in ESG
-              communication is shared across the broader market as practices
-              broadly institutionalize.
+              <strong>Key Insight:</strong> ESG communication growth remains
+              strong across the observation period, reflecting a sustained and
+              broad-based increase in disclosure practices among firms.
             </div>
           </div>
         </Card>
