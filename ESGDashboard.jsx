@@ -1453,9 +1453,7 @@ function MarketTab() {
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
-          <SecTitle
-            title="Main Market: E · S · G Pillar Trends"
-          />
+          <SecTitle title="Main Market: E · S · G Pillar Trends" />
           <PillarToggle visible={visMkt} onToggle={toggleMkt} />
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={mainPillar}>
@@ -1527,14 +1525,14 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              ESG communication in the Main Market increases steadily across all pillars, with Governance remaining the highest component and Environmental showing the strongest growth.
+              ESG communication in the Main Market increases steadily across all
+              pillars, with Governance remaining the highest component and
+              Environmental showing the strongest growth.
             </div>
           </div>
         </Card>
         <Card>
-          <SecTitle
-            title="ACE Market: E · S · G Pillar Trends"
-          />
+          <SecTitle title="ACE Market: E · S · G Pillar Trends" />
           <PillarToggle visible={visMkt} onToggle={toggleMkt} />
           <ResponsiveContainer width="100%" height={200}>
             <LineChart data={acePillar}>
@@ -1606,7 +1604,9 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              ESG communication in the ACE Market also increases across all pillars, though at consistently lower levels than the Main Market, with Governance remaining the largest component.
+              ESG communication in the ACE Market also increases across all
+              pillars, though at consistently lower levels than the Main Market,
+              with Governance remaining the largest component.
             </div>
           </div>
         </Card>
@@ -1643,7 +1643,7 @@ function MarketTab() {
               tick={{ fill: "#475569", fontSize: 10 }}
               axisLine={false}
               tickLine={false}
-              width={110}
+              width={160}
             />
             <Tooltip
               content={({ active, payload, label }) => {
