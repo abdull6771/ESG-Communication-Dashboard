@@ -1442,9 +1442,10 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              ESG communication intensity is consistently higher in the Main Market
-              than in the ACE Market across all ESG pillars, indicating systematic
-              differences in disclosure practices between the two listing segments.
+              ESG communication intensity is consistently higher in the Main
+              Market than in the ACE Market across all ESG pillars, indicating
+              systematic differences in disclosure practices between the two
+              listing segments.
             </div>
           </div>
         </Card>
@@ -1454,7 +1455,6 @@ function MarketTab() {
         <Card>
           <SecTitle
             title="Main Market: E · S · G Pillar Trends"
-            sub="Main Market shows strong growth across all pillars, with Environmental leading 60% increase"
           />
           <PillarToggle visible={visMkt} onToggle={toggleMkt} />
           <ResponsiveContainer width="100%" height={200}>
@@ -1527,14 +1527,7 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>
-                Main Market firms demonstrate higher and more uniform ESG
-                communication across all pillars,
-              </b>{" "}
-              with Energy and Utilities remaining the strongest communicators.
-              ESG communication within the Main Market appears more evenly
-              distributed across sectors, suggesting comparatively more
-              consistent disclosure practices.
+              ESG communication in the Main Market increases steadily across all pillars, with Governance remaining the highest component and Environmental showing the strongest growth.
             </div>
           </div>
         </Card>
