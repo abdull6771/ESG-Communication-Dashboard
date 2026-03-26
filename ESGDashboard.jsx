@@ -1626,7 +1626,7 @@ function MarketTab() {
               ACE: d.ACE || 0,
             }))}
             layout="vertical"
-              margin={{ left: 20 }}
+            margin={{ left: 20 }}
           >
             <CartesianGrid
               strokeDasharray="3 3"
@@ -1646,7 +1646,7 @@ function MarketTab() {
               axisLine={false}
               tickLine={false}
               width={160}
-                interval={0}
+              interval={0}
             />
             <Tooltip
               content={({ active, payload, label }) => {
@@ -1712,7 +1712,13 @@ function MarketTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            ESG communication intensity is consistently higher in the Main Market than in the ACE Market across most sectors, with more uniform disclosure patterns among Main Market firms. In contrast, ACE Market firms exhibit more uneven ESG communication, with sectors such as Financial Services, Plantation, and Property showing relatively lower intensity, while sectors like Energy and Utilities maintain relatively higher levels.
+            ESG communication intensity is consistently higher in the Main
+            Market than in the ACE Market across most sectors, with more uniform
+            disclosure patterns among Main Market firms. In contrast, ACE Market
+            firms exhibit more uneven ESG communication, with sectors such as
+            Financial Services, Plantation, and Property showing relatively
+            lower intensity, while sectors like Energy and Utilities maintain
+            relatively higher levels.
           </div>
         </div>
       </Card>
@@ -1819,12 +1825,7 @@ function SectorsTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> Energy ranks highest in ESG
-              communication intensity, followed closely by Utilities and
-              Financial Services. The spread between the highest and lowest
-              sectors is not extreme, indicating that ESG communication has
-              become broadly institutionalized across industries during the
-              observed period.
+              <strong>Key Insight:</strong> Energy ranks highest in ESG communication intensity, followed by Utilities and Financial Services. The relatively narrow spread across sectors suggests that ESG communication practices are broadly established across industries.
             </div>
           </div>
         </Card>
@@ -1927,7 +1928,7 @@ function SectorsTab() {
                 raw: d,
               }))}
             layout="vertical"
-              margin={{ left: 20 }}
+            margin={{ left: 20 }}
             barSize={14}
             margin={{ left: 0, right: 50 }}
           >
@@ -4249,7 +4250,7 @@ function StatsTab() {
         <ResponsiveContainer width="100%" height={200}>
           <BarChart
             layout="vertical"
-              margin={{ left: 20 }}
+            margin={{ left: 20 }}
             data={[
               {
                 name: "Environmental",
