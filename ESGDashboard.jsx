@@ -1712,10 +1712,7 @@ function MarketTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>Main Market firms make up the vast majority of the sample</b> and
-            concentrate in a few key sectors, while ACE representation is more
-            distributed — reflecting the broader diversity of smaller-cap
-            companies.
+            ESG communication intensity is consistently higher in the Main Market than in the ACE Market across most sectors, with more uniform disclosure patterns among Main Market firms. In contrast, ACE Market firms exhibit more uneven ESG communication, with sectors such as Financial Services, Plantation, and Property showing relatively lower intensity, while sectors like Energy and Utilities maintain relatively higher levels.
           </div>
         </div>
       </Card>
