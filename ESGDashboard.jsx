@@ -820,10 +820,9 @@ function OverviewTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> ESG communication intensity among
-              Malaysian Shariah-listed firms has increased steadily. Rather than
-              a temporary spike, the data indicate a sustained upward trend in
-              ESG communication across firms over the observation period.
+              <strong>Key Insight:</strong> ESG communication intensity
+              increases steadily over 2022–2024, indicating a sustained upward
+              trend in disclosure practices across firms.
             </div>
           </div>
         </Card>
