@@ -821,9 +821,12 @@ function OverviewTab() {
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
               <strong>Key Insight:</strong> ESG communication intensity has
-              risen consistently across all three years, indicating a
-              broad-based shift in disclosure behaviour rather than isolated
-              improvement among a few firms.
+              increased substantially and systematically across firms during
+              2022–2024, reflecting deeper integration of sustainability
+              narratives within corporate reporting. Environmental themes, in
+              particular, have experienced rapid expansion, consistent with
+              evolving regulatory expectations and global climate-related
+              disclosure standards.
             </div>
           </div>
         </Card>
@@ -929,9 +932,11 @@ function OverviewTab() {
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
               <strong>Key Insight:</strong> ESG communication has grown
-              steadily each year, with the slight deceleration suggesting early
-              adopters have reached higher baselines while laggards continue
-              catching up.
+              consistently across the observation period, confirming a
+              broad-based shift in disclosure behaviour. The slight deceleration
+              from 2023 to 2024 reflects firms that entered the period with
+              relatively higher baselines, while latecomers continue to expand
+              their narrative intensity.
             </div>
           </div>
         </Card>
@@ -995,9 +1000,11 @@ function OverviewTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>All three pillars are advancing simultaneously,</b> with
-            Environmental showing the most pronounced acceleration — reflecting
-            rising corporate attention to climate and disclosure obligations.
+            <b>All three pillars are advancing simultaneously,</b> but they do
+            so from differentiated starting points. Governance anchors the
+            highest baseline, while Environmental communication shows the
+            strongest proportional acceleration — reflecting rising corporate
+            attention to climate and climate-related disclosure obligations.
           </div>
         </div>
       </Card>
@@ -1127,9 +1134,11 @@ function PillarsTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Governance consistently anchors the highest baseline,</b>{" "}
-              while Environmental and Social are closing the gap — the pillar
-              hierarchy is persistent but gradually narrowing.
+              <b>Governance-related disclosure follows a more stable trajectory</b>
+              compared to Environmental and Social communication, exhibiting
+              smaller year-on-year changes. Environmental and Social are closing
+              the gap, but the pillar hierarchy remains persistent — a pattern
+              also noted in Schimanski et al. (2024).
             </div>
           </div>
         </Card>
@@ -1238,9 +1247,10 @@ function PillarsTab() {
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
               <b>Governance accounts for the largest share</b> of total ESG
-              communication, confirming a G-first disclosure culture where board
-              and compliance matters are prioritised over environmental and
-              social reporting.
+              communication intensity (avg. 10.98 pp), followed by
+              Environmental (7.89 pp) and Social (7.14 pp). This confirms a
+              G-first disclosure culture where board structures and compliance
+              matters are prioritised over environmental and social reporting.
             </div>
           </div>
         </Card>
@@ -1377,9 +1387,11 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Both markets are growing,</b> but ACE is accelerating at a
-              faster rate — suggesting smaller firms are rapidly integrating ESG
-              communication despite starting from a lower base.
+              <b>Firms listed on the Main Market exhibit higher average ESG
+              communication intensity</b> compared to firms on the ACE Market.
+              This structural difference suggests that listing segment
+              characteristics play a role in shaping disclosure practices,
+              independent of sector composition.
             </div>
           </div>
         </Card>
@@ -1444,10 +1456,11 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Main Market outpaces ACE on Environmental and Social,</b>{" "}
-              while ACE firms show a compliance-first pattern where Governance
-              disclosure is proportionally dominant relative to the other
-              pillars.
+              <b>ESG communication intensity is not solely sector-driven but
+              also shaped by listing market characteristics.</b> Firms in the
+              Main Market exhibit more consistently high ESG communication
+              levels across sectors relative to ACE Market firms, where
+              disclosure is more heterogeneous and selective.
             </div>
           </div>
         </Card>
@@ -1530,10 +1543,14 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Main Market firms are expanding ESG disclosure across all
-              pillars,</b> with Environmental and Social growing fastest from a
-              lower base while Governance — already well-established — shows the
-              slowest incremental gains.
+              <b>
+                Main Market firms demonstrate higher and more uniform ESG
+                communication across all pillars,
+              </b>{" "}
+              with Energy and Utilities remaining the strongest communicators.
+              ESG communication within the Main Market appears more evenly
+              distributed across sectors, suggesting comparatively more
+              consistent disclosure practices.
             </div>
           </div>
         </Card>
@@ -1613,9 +1630,11 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>ACE Market firms are catching up rapidly,</b> particularly on
-              Environmental and Social communication — signalling growing but
-              still nascent ESG adoption among smaller growth-stage companies.
+              <b>ACE Market ESG communication is more uneven and selective.</b>
+              While Energy and Healthcare show relatively strong disclosure
+              levels, several ACE sectors — such as Financial Services,
+              Plantation, and Property — display minimal or substantially lower
+              ESG communication intensity.
             </div>
           </div>
         </Card>
@@ -1718,9 +1737,9 @@ function MarketTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>Main Market firms make up the vast majority of the sample</b>{" "}
-            and concentrate in a few key sectors, while ACE representation is
-            more distributed — reflecting the broader diversity of smaller-cap
+            <b>Main Market firms make up the vast majority of the sample</b> and
+            concentrate in a few key sectors, while ACE representation is more
+            distributed — reflecting the broader diversity of smaller-cap
             companies.
           </div>
         </div>
@@ -1827,11 +1846,14 @@ function SectorsTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> Resource-intensive and heavily
-              regulated sectors lead in ESG communication intensity, while
-              knowledge-based sectors trail — pointing to uneven disclosure
-              maturity driven by differences in regulatory pressure and
-              stakeholder expectations.
+              <strong>Key Insight:</strong> Energy ranks highest in ESG
+              communication intensity, followed closely by Utilities and
+              Financial Services. Healthcare and Plantation also exhibit
+              relatively strong levels. At the lower end, Technology and
+              Telecommunications and Media display comparatively lower ESG
+              communication intensity. The spread between highest and lowest
+              sectors is not extreme, indicating ESG communication has become
+              broadly institutionalised across industries during 2022–2024.
             </div>
           </div>
         </Card>
@@ -1902,10 +1924,13 @@ function SectorsTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Sectors starting from lower baselines are growing fastest,</b>{" "}
-              while sectors with already-high disclosure levels show slower
-              incremental gains — suggesting early saturation among established
-              communicators.
+              <b>Construction records the strongest growth in ESG
+              communication,</b> followed closely by Consumer Products and
+              Services and Energy. Transportation and Logistics and Industrial
+              Products and Services also show substantial improvements. In
+              contrast, Utilities — despite ranking among the highest in overall
+              ESG level — exhibits relatively modest growth, indicating prior
+              maturity. Financial Services displays the lowest improvement.
             </div>
           </div>
         </Card>
@@ -2055,12 +2080,12 @@ function SectorsTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>Sectors that started from a lower 2022 base</b> record the
+            <b>Leadership in ESG communication is multidimensional.</b> Some
+            sectors lead in absolute communication intensity, while others
+            differentiate themselves through rapid expansion in disclosure
+            practices. Sectors starting from a lower 2022 base record the
             highest relative growth rates, while already-mature communicators
-            show the least proportional change. The relative ranking differs
-            meaningfully from the absolute gain chart — a sector can grow
-            a lot in absolute terms yet rank low in relative terms if its
-            starting point was already high.
+            show the least proportional change.
           </div>
         </div>
       </Card>
@@ -2258,12 +2283,14 @@ function SectorsTab() {
         >
           <span style={{ fontSize: 14 }}>💡</span>
           <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
-            <strong>Key Insight:</strong> Regulatory pressure drives sector
-            positioning — resource-intensive sectors emerge as Leaders while
-            knowledge-based sectors cluster in the Laggard quadrant. The most
-            concerning finding is that high absolute level does not guarantee
-            continued momentum: some well-established sectors show signs of
-            stagnation rather than maturity.
+            <strong>Key Insight:</strong> Energy stands out as the most
+            prominent Leader, combining the highest ESG communication level in
+            2024 with strong growth. Utilities exhibits a Mature profile — high
+            level, modest growth — indicating a well-developed but stabilising
+            disclosure environment. Industrial Products and Services and
+            Transportation and Logistics are Catching-Up sectors, while
+            Financial Services and Technology occupy the Laggard quadrant with
+            weaker growth and lower communication levels.
           </div>
         </div>
       </Card>
@@ -2393,9 +2420,10 @@ function SectorsTab() {
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
             <b>Sectors follow divergent trajectories</b> — some climb steeply
-            while others plateau or grow modestly, meaning the overall market
-            average masks substantial variation in how quickly individual
-            industries are advancing their ESG disclosure.
+            while others plateau or grow modestly. ESG communication practices
+            are sector-dependent and heterogeneous across industries. The
+            overall market average masks substantial variation in how quickly
+            individual industries are advancing their disclosure intensity.
           </div>
         </div>
       </Card>
@@ -2498,11 +2526,14 @@ function SectorsTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>Governance is the dominant pillar in every sector without
-            exception,</b> confirming the G-first disclosure pattern is
-            structural rather than sector-specific. Environmental communication
-            is highest in resource-intensive industries, reflecting where
-            external pressure most strongly shapes pillar emphasis.
+            <b>Environmental communication is most prominent in Utilities and
+            Energy,</b> reinforcing that environmentally exposed sectors exhibit
+            stronger ESG disclosure. Healthcare leads in Social disclosure,
+            reflecting emphasis on stakeholder engagement and employee welfare.
+            Governance communication appears most evenly distributed across
+            sectors, with Technology, Industrial Products, and Consumer Products
+            ranking relatively high. Utilities, while leading in environmental
+            communication, exhibits comparatively moderate governance intensity.
           </div>
         </div>
       </Card>
@@ -2662,11 +2693,13 @@ function DistributionTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
-              <strong>Key Insight:</strong> The majority of firms cluster
-              around a shared market norm, with genuinely low communicators and
-              elite disclosers both representing small minorities — suggesting
-              strong convergence toward an informal disclosure standard, with
-              meaningful upside for firms willing to move beyond the crowd.
+              <strong>Key Insight:</strong> ESG communication intensity varies
+              considerably across firm-year observations (mean 26.0%, range
+              0.44%–68.81%), indicating meaningful differences in disclosure
+              strategies. The distribution shows significant heterogeneity,
+              with the majority of firms clustering in the mid-range and a
+              persistent bottom tail of low disclosers that has not fully closed
+              over the period.
             </div>
           </div>
         </Card>
@@ -2738,12 +2771,13 @@ function DistributionTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
-              <strong>Key Insight:</strong> ESG communication is improving
-              broadly — not just among top performers — with even the bottom
-              quartile advancing materially. At the same time, the widening
-              spread indicates that firms are increasingly diverging in their
-              disclosure ambition, creating a growing gap between improvers and
-              those who remain stagnant.
+              <strong>Key Insight:</strong> Across all three years, maximum
+              values have increased substantially, indicating that top-end
+              disclosers are lifting their ceiling. At the lower bound, minimum
+              values remain relatively low, implying some firms still disclose
+              ESG content at very limited levels. This persistent bottom tail
+              highlights that the reporting gap within the industry has not
+              fully closed despite broad-based growth.
             </div>
           </div>
         </Card>
@@ -2854,10 +2888,11 @@ function DistributionTab() {
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
               <strong>Key Insight:</strong> Top communicators are
-              disproportionately concentrated in resource-intensive and
-              regulated sectors, with Main Market firms dominating — suggesting
-              that listing maturity and regulatory exposure are the strongest
-              predictors of elite ESG disclosure.
+              disproportionately concentrated in Energy, Utilities, and
+              Plantation sectors, with Main Market firms dominating the top tier.
+              These firms exhibit substantially more extensive ESG-related
+              disclosure relative to the sample average, reflecting both
+              regulatory exposure and mature disclosure practices.
             </div>
           </div>
         </Card>
@@ -2935,8 +2970,10 @@ function DistributionTab() {
             <div style={{ fontSize: 11, color: "#7f1d1d", lineHeight: 1.5 }}>
               <strong>Key Insight:</strong> The bottom communicators span
               diverse sectors and both markets, indicating that low ESG
-              disclosure is not confined to any single industry — it reflects
-              firm-level choices rather than structural sector constraints.
+              disclosure is not confined to any single industry. This persistent
+              bottom tail reflects firm-level choices rather than structural
+              sector constraints, and highlights that some firms still disclose
+              ESG content at very limited levels.
             </div>
           </div>
         </Card>
@@ -3518,12 +3555,11 @@ function ShariahTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
-              <strong>Key Insight:</strong> The asymmetric radar shape
-              confirms a structurally imbalanced ESG profile — Governance
-              disclosure is disproportionately developed relative to
-              Environmental and Social, reflecting a compliance-first
-              orientation that has yet to extend to broader sustainability
-              reporting.
+              <strong>Key Insight:</strong> The asymmetric radar shape confirms
+              a structurally imbalanced ESG profile — Governance disclosure is
+              disproportionately developed relative to Environmental and Social,
+              reflecting a compliance-first orientation that has yet to extend
+              to broader sustainability reporting.
             </div>
           </div>
         </Card>
@@ -3585,10 +3621,12 @@ function ShariahTab() {
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.6 }}>
               <strong>Key Insight:</strong>{" "}
-              <strong>Main Market firms demonstrate more uniform and
-              comprehensive ESG disclosure across all pillars,</strong> while
-              ACE Market firms show more selective reporting patterns consistent
-              with their growth-stage characteristics.
+              <strong>
+                Main Market firms demonstrate more uniform and comprehensive ESG
+                disclosure across all pillars,
+              </strong>{" "}
+              while ACE Market firms show more selective reporting patterns
+              consistent with their growth-stage characteristics.
             </div>
           </div>
         </Card>
@@ -4111,9 +4149,9 @@ function StatsTab() {
             </div>
             <div style={{ color: "#15803d", fontSize: 11, lineHeight: 1.6 }}>
               A 10-point increase in ESG communication intensity → ~2-point
-              increase in Refinitiv ESG score (β=0.207, p&lt;0.01). Association
-              strongest for <b>Environmental</b> (β=0.496) and <b>Social</b>{" "}
-              (β=0.396).
+              increase in Refinitiv ESG score (β=0.194, p&lt;0.01). Association
+              strongest for <b>Environmental</b> (β=0.491) and <b>Social</b>{" "}
+              (β=0.397).
             </div>
           </div>
           <div
@@ -4135,10 +4173,10 @@ function StatsTab() {
               ⚠️ Governance Exception
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              Governance communication (β=0.293) is{" "}
-              <b>not statistically significant</b> — reflecting the stable and
-              standardized nature of governance arrangements, with limited
-              within-firm variation over time.
+              Governance communication (β=0.220) is{" "}
+              <b>not statistically significant</b> — reflecting the relatively
+              structural and persistent nature of governance arrangements, which
+              may not adjust as rapidly as narrative disclosure intensity.
             </div>
           </div>
         </div>
@@ -4153,21 +4191,21 @@ function StatsTab() {
             [
               "ESG Overall",
               "esg_com → esg_score",
-              0.207,
-              0.168,
+              0.194,
+              0.165,
               "#1e3a5f",
               "***",
             ],
             [
               "Environmental",
               "env_com → env_pillar",
-              0.496,
-              0.304,
+              0.491,
+              0.293,
               C.env,
               "***",
             ],
-            ["Social", "soc_com → soc_pillar", 0.396, 0.121, C.soc, "***"],
-            ["Governance", "gov_com → gov_pillar", 0.293, 0.012, C.gov, "n.s."],
+            ["Social", "soc_com → soc_pillar", 0.397, 0.122, C.soc, "***"],
+            ["Governance", "gov_com → gov_pillar", 0.220, 0.008, C.gov, "n.s."],
           ].map(([name, path, beta, r2, col, sig]) => (
             <div
               key={name}
@@ -4245,14 +4283,46 @@ function StatsTab() {
           <BarChart
             layout="vertical"
             data={[
-              { name: "Environmental", beta: 0.491, lo: 0.230, hi: 0.752, col: C.env, sig: true },
-              { name: "Social",        beta: 0.397, lo: 0.140, hi: 0.654, col: C.soc, sig: true },
-              { name: "ESG Overall",   beta: 0.194, lo: 0.108, hi: 0.280, col: "#1e3a5f", sig: true },
-              { name: "Governance",    beta: 0.220, lo: -0.139, hi: 0.579, col: C.gov, sig: false },
+              {
+                name: "Environmental",
+                beta: 0.491,
+                lo: 0.23,
+                hi: 0.752,
+                col: C.env,
+                sig: true,
+              },
+              {
+                name: "Social",
+                beta: 0.397,
+                lo: 0.14,
+                hi: 0.654,
+                col: C.soc,
+                sig: true,
+              },
+              {
+                name: "ESG Overall",
+                beta: 0.194,
+                lo: 0.108,
+                hi: 0.28,
+                col: "#1e3a5f",
+                sig: true,
+              },
+              {
+                name: "Governance",
+                beta: 0.22,
+                lo: -0.139,
+                hi: 0.579,
+                col: C.gov,
+                sig: false,
+              },
             ]}
             margin={{ left: 100, right: 60, top: 10, bottom: 10 }}
           >
-            <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" horizontal={false} />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="#f1f5f9"
+              horizontal={false}
+            />
             <XAxis
               type="number"
               domain={[-0.2, 0.85]}
@@ -4276,34 +4346,103 @@ function StatsTab() {
                 if (!active || !payload?.length) return null;
                 const d = payload[0].payload;
                 return (
-                  <div style={{ background: "#1e3a5f", borderRadius: 8, padding: "8px 12px" }}>
-                    <div style={{ color: "#fff", fontWeight: 700, fontSize: 11 }}>{d.name}</div>
-                    <div style={{ color: "#93c5fd", fontSize: 11 }}>β = {d.beta}</div>
-                    <div style={{ color: "#94a3b8", fontSize: 10 }}>95% CI [{d.lo}, {d.hi}]</div>
-                    <div style={{ color: d.sig ? "#4ade80" : "#f87171", fontSize: 10 }}>{d.sig ? "Significant (p < 0.01)" : "Not significant"}</div>
+                  <div
+                    style={{
+                      background: "#1e3a5f",
+                      borderRadius: 8,
+                      padding: "8px 12px",
+                    }}
+                  >
+                    <div
+                      style={{ color: "#fff", fontWeight: 700, fontSize: 11 }}
+                    >
+                      {d.name}
+                    </div>
+                    <div style={{ color: "#93c5fd", fontSize: 11 }}>
+                      β = {d.beta}
+                    </div>
+                    <div style={{ color: "#94a3b8", fontSize: 10 }}>
+                      95% CI [{d.lo}, {d.hi}]
+                    </div>
+                    <div
+                      style={{
+                        color: d.sig ? "#4ade80" : "#f87171",
+                        fontSize: 10,
+                      }}
+                    >
+                      {d.sig ? "Significant (p < 0.01)" : "Not significant"}
+                    </div>
                   </div>
                 );
               }}
             />
             <Bar dataKey="beta" radius={[0, 4, 4, 0]} isAnimationActive={false}>
               {[
-                { name: "Environmental", beta: 0.491, lo: 0.230, hi: 0.752, col: C.env, sig: true },
-                { name: "Social",        beta: 0.397, lo: 0.140, hi: 0.654, col: C.soc, sig: true },
-                { name: "ESG Overall",   beta: 0.194, lo: 0.108, hi: 0.280, col: "#1e3a5f", sig: true },
-                { name: "Governance",    beta: 0.220, lo: -0.139, hi: 0.579, col: C.gov, sig: false },
+                {
+                  name: "Environmental",
+                  beta: 0.491,
+                  lo: 0.23,
+                  hi: 0.752,
+                  col: C.env,
+                  sig: true,
+                },
+                {
+                  name: "Social",
+                  beta: 0.397,
+                  lo: 0.14,
+                  hi: 0.654,
+                  col: C.soc,
+                  sig: true,
+                },
+                {
+                  name: "ESG Overall",
+                  beta: 0.194,
+                  lo: 0.108,
+                  hi: 0.28,
+                  col: "#1e3a5f",
+                  sig: true,
+                },
+                {
+                  name: "Governance",
+                  beta: 0.22,
+                  lo: -0.139,
+                  hi: 0.579,
+                  col: C.gov,
+                  sig: false,
+                },
               ].map((d, i) => (
                 <Cell key={i} fill={d.sig ? d.col : "#cbd5e1"} />
               ))}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
-        <div style={{ marginTop: 8, display: "flex", gap: 16, fontSize: 10, color: "#64748b", justifyContent: "flex-end" }}>
+        <div
+          style={{
+            marginTop: 8,
+            display: "flex",
+            gap: 16,
+            fontSize: 10,
+            color: "#64748b",
+            justifyContent: "flex-end",
+          }}
+        >
           {[
             { color: C.env, label: "Significant (p < 0.01)" },
             { color: "#cbd5e1", label: "Not significant" },
           ].map((t) => (
-            <div key={t.label} style={{ display: "flex", alignItems: "center", gap: 5 }}>
-              <div style={{ width: 10, height: 10, borderRadius: 2, background: t.color, flexShrink: 0 }} />
+            <div
+              key={t.label}
+              style={{ display: "flex", alignItems: "center", gap: 5 }}
+            >
+              <div
+                style={{
+                  width: 10,
+                  height: 10,
+                  borderRadius: 2,
+                  background: t.color,
+                  flexShrink: 0,
+                }}
+              />
               {t.label}
             </div>
           ))}
@@ -4317,14 +4456,29 @@ function StatsTab() {
             padding: 12,
           }}
         >
-          <div style={{ color: "#92400e", fontWeight: 700, fontSize: 11, marginBottom: 5 }}>Key Insight</div>
+          <div
+            style={{
+              color: "#92400e",
+              fontWeight: 700,
+              fontSize: 11,
+              marginBottom: 5,
+            }}
+          >
+            Key Insight
+          </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>Environmental and Social communication carry the strongest and
-            most reliable effects on ESG performance,</b> while Governance
-            communication — despite being the most-used pillar — shows no
-            statistically significant relationship with its corresponding score,
-            suggesting that governance disclosures are too standardised to
-            differentiate firm performance.
+            <b>
+              Overall ESG communication is positively and significantly
+              associated with ESG scores (β = 0.194, p &lt; 0.01).
+            </b>{" "}
+            A 10-point increase in ESG communication intensity is associated
+            with approximately a 2-point increase in ESG score. The association
+            is strongest for Environmental (β = 0.491, p &lt; 0.01) and Social
+            (β = 0.397, p &lt; 0.01) communication. In contrast, Governance
+            communication does not exhibit a statistically significant
+            association with governance scores — reflecting the relatively
+            structural and stable nature of governance arrangements among
+            Malaysian Shariah-listed firms.
           </div>
         </div>
       </Card>
@@ -4692,11 +4846,14 @@ function GWTab() {
         >
           <span style={{ fontSize: 14 }}>💡</span>
           <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-            <strong>Key Insight:</strong> Most firms cluster near the diagonal,
-            indicating broad alignment between what they communicate and how
-            they perform. The meaningful minority above the line — firms whose
-            communication consistently exceeds their scores — represents the
-            clearest candidates for ESG overstatement risk.
+            <strong>Key Insight:</strong> The overall greenwashing gap has a
+            mean of 0.148 and a standard deviation of 1.021. The positive mean
+            indicates that, on average, ESG communication intensity slightly
+            exceeds ESG performance scores — a mild aggregate tendency toward
+            overstatement. However, the wide interquartile range (−0.455 to
+            0.814) and range (−3.144 to 3.843) indicate substantial
+            heterogeneity: while some firms overstate, others significantly
+            under-communicate their ESG achievements.
           </div>
         </div>
       </Card>
