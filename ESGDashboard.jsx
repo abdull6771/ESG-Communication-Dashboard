@@ -1138,7 +1138,6 @@ function PillarsTab() {
         <Card>
           <SecTitle
             title="Pillar Contribution to Total ESG"
-            sub="Governance dominates — share and intensity by pillar"
           />
           <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
             <div style={{ flex: "0 0 48%" }}>
@@ -1239,11 +1238,10 @@ function PillarsTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>Governance accounts for the largest share</b> of total ESG
-              communication intensity (avg. 10.98 pp), followed by Environmental
-              (7.89 pp) and Social (7.14 pp). This confirms a G-first disclosure
-              culture where board structures and compliance matters are
-              prioritised over environmental and social reporting.
+              Governance accounts for the largest share of ESG communication,
+              followed by Environmental and Social components. This may
+              reflect the relatively more structured and standardized nature
+              of governance-related disclosures in annual reports.
             </div>
           </div>
         </Card>
