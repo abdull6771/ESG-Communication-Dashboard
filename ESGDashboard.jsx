@@ -993,11 +993,10 @@ function OverviewTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>All three pillars are advancing simultaneously,</b> but they do
-            so from differentiated starting points. Governance anchors the
-            highest baseline, while Environmental communication shows the
-            strongest proportional acceleration — reflecting rising corporate
-            attention to climate and climate-related disclosure obligations.
+            <b>All three ESG pillars increase steadily over the period,</b> with
+            Governance remaining the dominant component, Environmental
+            communication showing the fastest growth, and Social communication
+            rising progressively.
           </div>
         </div>
       </Card>
