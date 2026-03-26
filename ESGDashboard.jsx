@@ -1053,9 +1053,7 @@ function PillarsTab() {
 
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
-          <SecTitle
-            title="E · S · G Intensity Trend (2022–2024)"
-          />
+          <SecTitle title="E · S · G Intensity Trend (2022–2024)" />
           <PillarToggle visible={visPl} onToggle={togglePl} />
           <ResponsiveContainer width="100%" height={250}>
             <LineChart data={pillarTrend}>
@@ -1129,12 +1127,11 @@ function PillarsTab() {
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
               <b>
-                Governance-related disclosure follows a more stable trajectory
-              </b>
-              compared to Environmental and Social communication, exhibiting
-              smaller year-on-year changes. Environmental and Social are closing
-              the gap, but the pillar hierarchy remains persistent — a pattern
-              also noted in Schimanski et al. (2024).
+                Governance communication remains the largest and relatively
+                stable component over time,
+              </b>{" "}
+              while Environmental and Social communication increase steadily
+              across the period.
             </div>
           </div>
         </Card>
