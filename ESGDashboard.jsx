@@ -22,6 +22,7 @@ import {
   Scatter,
   ZAxis,
   ReferenceLine,
+  LabelList,
 } from "recharts";
 
 import RAW from "./src/data/rawData.js";
@@ -711,7 +712,7 @@ function OverviewTab() {
             title="Average ESG Communication Intensity (2022–2024)"
             sub="Steady broad-based increase across 621 Shariah-listed firms"
           />
-          <ResponsiveContainer width="100%" height={240}>
+          <ResponsiveContainer width="100%" height={400}>
             <LineChart data={yd}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -1617,7 +1618,7 @@ function MarketTab() {
           title="Number of Firms by Sector and Listing Market"
           sub="Stacked bar — MAIN (teal) + ACE (orange)"
         />
-        <ResponsiveContainer width="100%" height={240}>
+        <ResponsiveContainer width="100%" height={400}>
           <BarChart
             data={sm.map((d) => ({
               sector: SHORT[d.sector] || d.sector,
@@ -1625,6 +1626,7 @@ function MarketTab() {
               ACE: d.ACE || 0,
             }))}
             layout="vertical"
+              margin={{ left: 20 }}
           >
             <CartesianGrid
               strokeDasharray="3 3"
@@ -1644,6 +1646,7 @@ function MarketTab() {
               axisLine={false}
               tickLine={false}
               width={160}
+                interval={0}
             />
             <Tooltip
               content={({ active, payload, label }) => {
@@ -1773,6 +1776,7 @@ function SectorsTab() {
                 esg_com: d.esg_com,
               }))}
               layout="vertical"
+              margin={{ left: 20 }}
               barSize={14}
             >
               <CartesianGrid
@@ -1840,6 +1844,7 @@ function SectorsTab() {
                 growth: d.growth,
               }))}
               layout="vertical"
+              margin={{ left: 20 }}
               barSize={14}
             >
               <CartesianGrid
@@ -1925,6 +1930,7 @@ function SectorsTab() {
                 raw: d,
               }))}
             layout="vertical"
+              margin={{ left: 20 }}
             barSize={14}
             margin={{ left: 0, right: 50 }}
           >
@@ -3410,7 +3416,7 @@ function ShariahTab() {
             title="Governance Leadership (2022–2024)"
             sub="E → S → G communication intensity — Governance consistently leads"
           />
-          <ResponsiveContainer width="100%" height={240}>
+          <ResponsiveContainer width="100%" height={400}>
             <LineChart data={yd}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -3485,7 +3491,7 @@ function ShariahTab() {
             title="2024 ESG Radar — E · S · G Balance"
             sub="Latest year pillar profile — Environmental, Social, Governance"
           />
-          <ResponsiveContainer width="100%" height={240}>
+          <ResponsiveContainer width="100%" height={400}>
             <RadarChart data={radar2024} cx="50%" cy="50%" outerRadius={80}>
               <PolarGrid stroke="#e2e8f0" />
               <PolarAngleAxis
@@ -4246,6 +4252,7 @@ function StatsTab() {
         <ResponsiveContainer width="100%" height={200}>
           <BarChart
             layout="vertical"
+              margin={{ left: 20 }}
             data={[
               {
                 name: "Environmental",
