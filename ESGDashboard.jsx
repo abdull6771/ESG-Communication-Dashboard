@@ -1136,9 +1136,7 @@ function PillarsTab() {
           </div>
         </Card>
         <Card>
-          <SecTitle
-            title="Pillar Contribution to Total ESG"
-          />
+          <SecTitle title="Pillar Contribution to Total ESG" />
           <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
             <div style={{ flex: "0 0 48%" }}>
               <ResponsiveContainer width="100%" height={220}>
@@ -1239,9 +1237,9 @@ function PillarsTab() {
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
               Governance accounts for the largest share of ESG communication,
-              followed by Environmental and Social components. This may
-              reflect the relatively more structured and standardized nature
-              of governance-related disclosures in annual reports.
+              followed by Environmental and Social components. This may reflect
+              the relatively more structured and standardized nature of
+              governance-related disclosures in annual reports.
             </div>
           </div>
         </Card>
@@ -1317,7 +1315,6 @@ function MarketTab() {
           <SecTitle
             tag="Figure 4"
             title="Main vs ACE ESG Communication Trend (2022–2024)"
-            sub="Both markets show upward trajectory; Main Market consistently higher"
           />
           <ResponsiveContainer width="100%" height={180}>
             <LineChart data={trendCompare}>
@@ -1378,13 +1375,9 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>
-                Firms listed on the Main Market exhibit higher average ESG
-                communication intensity
-              </b>{" "}
-              compared to firms on the ACE Market. This structural difference
-              suggests that listing segment characteristics play a role in
-              shaping disclosure practices, independent of sector composition.
+              Firms listed on the Main Market exhibit higher ESG communication
+              intensity compared to ACE Market firms, with a consistent gap
+              observed across the period.
             </div>
           </div>
         </Card>
