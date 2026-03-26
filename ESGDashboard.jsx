@@ -1442,13 +1442,9 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>
-                ESG communication intensity is not solely sector-driven but also
-                shaped by listing market characteristics.
-              </b>{" "}
-              Firms in the Main Market exhibit more consistently high ESG
-              communication levels across sectors relative to ACE Market firms,
-              where disclosure is more heterogeneous and selective.
+              ESG communication intensity is consistently higher in the Main Market
+              than in the ACE Market across all ESG pillars, indicating systematic
+              differences in disclosure practices between the two listing segments.
             </div>
           </div>
         </Card>
