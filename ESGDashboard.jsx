@@ -1534,7 +1534,6 @@ function MarketTab() {
         <Card>
           <SecTitle
             title="ACE Market: E · S · G Pillar Trends"
-            sub="ACE Market accelerates dramatically—Environmental and Social grow 80%+, nearly catching Main Market"
           />
           <PillarToggle visible={visMkt} onToggle={toggleMkt} />
           <ResponsiveContainer width="100%" height={200}>
@@ -1607,11 +1606,7 @@ function MarketTab() {
               Key Insight
             </div>
             <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              <b>ACE Market ESG communication is more uneven and selective.</b>
-              While Energy and Healthcare show relatively strong disclosure
-              levels, several ACE sectors — such as Financial Services,
-              Plantation, and Property — display minimal or substantially lower
-              ESG communication intensity.
+              ESG communication in the ACE Market also increases across all pillars, though at consistently lower levels than the Main Market, with Governance remaining the largest component.
             </div>
           </div>
         </Card>
