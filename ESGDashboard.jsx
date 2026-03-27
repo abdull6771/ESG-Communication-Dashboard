@@ -1319,10 +1319,10 @@ function MarketTab() {
         />
       </div>
 
-      <div>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle title="Main vs ACE ESG Communication Trend (2022–2024)" />
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={280}>
             <LineChart data={trendCompare}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -1387,15 +1387,12 @@ function MarketTab() {
             </div>
           </div>
         </Card>
-      </div>
-
-      <div>
         <Card>
           <SecTitle
             title="ESG Communication by Sector Across Markets"
             sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
           />
-          <ResponsiveContainer width="100%" height={400}>
+          <ResponsiveContainer width="100%" height={280}>
             <BarChart
               data={secMktTable.map((d) => ({
                 sector: SHORT[d.sector] || d.sector,
