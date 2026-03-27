@@ -2151,17 +2151,17 @@ function SectorsTab() {
           style={{ display: "grid", gridTemplateColumns: "3fr 1fr", gap: 16 }}
         >
           <div style={{ position: "relative" }}>
-            <ResponsiveContainer width="100%" height={300}>
+            <ResponsiveContainer width="100%" height={500}>
               <ScatterChart
-                margin={{ top: 20, right: 20, bottom: 30, left: 20 }}
+                margin={{ top: 20, right: 20, bottom: 60, left: 20 }}
               >
-                <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
+                <CartesianGrid strokeDasharray="3 3" stroke="#eff6ff" />
                 <XAxis
                   dataKey="y2024"
                   type="number"
                   domain={[26, 40]}
                   name="Level"
-                  tick={{ fill: "#94a3b8", fontSize: 9 }}
+                  tick={{ fill: "#64748b", fontSize: 9 }}
                   axisLine={false}
                   tickLine={false}
                   tickFormatter={(v) => v + "%"}
@@ -2169,7 +2169,7 @@ function SectorsTab() {
                     value: "ESG Level 2024 (%)",
                     position: "insideBottom",
                     offset: -12,
-                    fill: "#64748b",
+                    fill: "#475569",
                     fontSize: 10,
                   }}
                 />
@@ -2178,25 +2178,25 @@ function SectorsTab() {
                   type="number"
                   domain={[0, 12]}
                   name="Growth"
-                  tick={{ fill: "#94a3b8", fontSize: 9 }}
+                  tick={{ fill: "#64748b", fontSize: 9 }}
                   axisLine={false}
                   tickLine={false}
                   label={{
                     value: "Growth (pp)",
                     angle: -90,
                     position: "insideLeft",
-                    fill: "#64748b",
+                    fill: "#475569",
                     fontSize: 10,
                   }}
                 />
                 <ReferenceLine
                   x={medLevel}
-                  stroke="#cbd5e1"
+                  stroke="#a0aec0"
                   strokeDasharray="4 4"
                 />
                 <ReferenceLine
                   y={medGrowth}
-                  stroke="#cbd5e1"
+                  stroke="#a0aec0"
                   strokeDasharray="4 4"
                 />
                 <ZAxis dataKey="firms" range={[60, 180]} />
@@ -2242,9 +2242,9 @@ function SectorsTab() {
             </ResponsiveContainer>
             {[
               ["Leaders", { top: 24, right: 26 }],
-              ["Mature", { bottom: 250, right: 26 }],
+              ["Mature", { bottom: 160, right: 26 }],
               ["Catching-up", { top: 24, left: 50 }],
-              ["Laggards", { bottom: 250, left: 50 }],
+              ["Laggards", { bottom: 160, left: 52 }],
             ].map(([lbl, pos]) => (
               <div
                 key={lbl}
