@@ -1456,88 +1456,6 @@ function MarketTab() {
         </Card>
       </div>
 
-      <div>
-        <Card>
-          <SecTitle
-            title="ESG Communication by Sector Across Markets"
-            sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
-          />
-          <ResponsiveContainer width="100%" height={400}>
-            <BarChart
-              data={secMktTable.map((d) => ({
-                sector: SHORT[d.sector] || d.sector,
-                "Main Market": d.MAIN,
-                "ACE Market": d.ACE,
-              }))}
-              layout="vertical"
-              margin={{ left: 120, right: 20 }}
-            >
-              <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="#f1f5f9"
-                horizontal={true}
-              />
-              <XAxis type="number" tick={{ fill: "#94a3b8", fontSize: 10 }} />
-              <YAxis
-                dataKey="sector"
-                width={110}
-                tick={{ fill: "#475569", fontSize: 10 }}
-                type="category"
-              />
-              <Tooltip
-                content={({ active, payload, label }) => {
-                  if (!active || !payload?.length) return null;
-                  return (
-                    <div
-                      style={{
-                        background: "#1e3a5f",
-                        borderRadius: 8,
-                        padding: "9px 13px",
-                      }}
-                    >
-                      <div style={{ color: "#94a3b8", fontSize: 10 }}>
-                        {label}
-                      </div>
-                      {payload.map((p, i) => (
-                        <div key={i} style={{ color: p.fill, fontWeight: 700 }}>
-                          {p.name}: {fmt(p.value, 2)}%
-                        </div>
-                      ))}
-                    </div>
-                  );
-                }}
-              />
-              <Legend wrapperStyle={{ paddingTop: 14 }} iconType="square" />
-              <Bar dataKey="Main Market" fill={C.main} barSize={20} />
-              <Bar dataKey="ACE Market" fill={C.ace} barSize={20} />
-            </BarChart>
-          </ResponsiveContainer>
-          <div
-            style={{
-              marginTop: 12,
-              background: "#f0fdf9",
-              border: "1px solid #99f6e4",
-              borderRadius: 8,
-              padding: "10px 14px",
-              display: "flex",
-              gap: 8,
-              alignItems: "flex-start",
-            }}
-          >
-            <span style={{ fontSize: 14 }}>💡</span>
-            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> ESG communication intensity is
-              consistently higher in the Main Market than in the ACE Market
-              across most sectors. The gap is particularly pronounced in sectors
-              such as Utilities, Telecommunications & Media, and Technology.
-              While ACE Market firms show comparable levels in a few sectors,
-              overall disclosure remains more consistently higher among Main
-              Market firms.
-            </div>
-          </div>
-        </Card>
-      </div>
-
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle title="Main Market: E · S · G Pillar Trends" />
@@ -1803,6 +1721,88 @@ function MarketTab() {
           </div>
         </div>
       </Card>
+
+      <div>
+        <Card>
+          <SecTitle
+            title="ESG Communication by Sector Across Markets"
+            sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
+          />
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+              data={secMktTable.map((d) => ({
+                sector: SHORT[d.sector] || d.sector,
+                "Main Market": d.MAIN,
+                "ACE Market": d.ACE,
+              }))}
+              layout="vertical"
+              margin={{ left: 120, right: 20 }}
+            >
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#f1f5f9"
+                horizontal={true}
+              />
+              <XAxis type="number" tick={{ fill: "#94a3b8", fontSize: 10 }} />
+              <YAxis
+                dataKey="sector"
+                width={110}
+                tick={{ fill: "#475569", fontSize: 10 }}
+                type="category"
+              />
+              <Tooltip
+                content={({ active, payload, label }) => {
+                  if (!active || !payload?.length) return null;
+                  return (
+                    <div
+                      style={{
+                        background: "#1e3a5f",
+                        borderRadius: 8,
+                        padding: "9px 13px",
+                      }}
+                    >
+                      <div style={{ color: "#94a3b8", fontSize: 10 }}>
+                        {label}
+                      </div>
+                      {payload.map((p, i) => (
+                        <div key={i} style={{ color: p.fill, fontWeight: 700 }}>
+                          {p.name}: {fmt(p.value, 2)}%
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }}
+              />
+              <Legend wrapperStyle={{ paddingTop: 14 }} iconType="square" />
+              <Bar dataKey="Main Market" fill={C.main} barSize={20} />
+              <Bar dataKey="ACE Market" fill={C.ace} barSize={20} />
+            </BarChart>
+          </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> ESG communication intensity is
+              consistently higher in the Main Market than in the ACE Market
+              across most sectors. The gap is particularly pronounced in sectors
+              such as Utilities, Telecommunications & Media, and Technology.
+              While ACE Market firms show comparable levels in a few sectors,
+              overall disclosure remains more consistently higher among Main
+              Market firms.
+            </div>
+          </div>
+        </Card>
+      </div>
     </div>
   );
 }
