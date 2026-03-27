@@ -1732,8 +1732,8 @@ function MarketTab() {
             <BarChart
               data={secMktTable.map((d) => ({
                 sector: SHORT[d.sector] || d.sector,
-                "Main Market": d.MAIN,
                 "ACE Market": d.ACE,
+                "Main Market": d.MAIN,
               }))}
               layout="vertical"
               margin={{ left: 120, right: 20 }}
@@ -1774,8 +1774,8 @@ function MarketTab() {
                 }}
               />
               <Legend wrapperStyle={{ paddingTop: 14 }} iconType="square" />
-              <Bar dataKey="Main Market" fill={C.main} barSize={20} />
               <Bar dataKey="ACE Market" fill={C.ace} barSize={20} />
+              <Bar dataKey="Main Market" fill={C.main} barSize={20} />
             </BarChart>
           </ResponsiveContainer>
           <div
