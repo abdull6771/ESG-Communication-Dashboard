@@ -1389,10 +1389,80 @@ function MarketTab() {
         </Card>
         <Card>
           <SecTitle
+            title="Pillar-Level Market Comparison (E → S → G)"
+            sub="Environmental, Social, Governance breakdown by listing segment"
+          />
+          <ResponsiveContainer width="100%" height={280}>
+            <BarChart data={pillarComp} barGap={8}>
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#f1f5f9"
+                vertical={false}
+              />
+              <XAxis
+                dataKey="pillar"
+                tick={{ fill: "#475569", fontSize: 10 }}
+                axisLine={false}
+                tickLine={false}
+              />
+              <YAxis
+                tick={{ fill: "#94a3b8", fontSize: 10 }}
+                axisLine={false}
+                tickLine={false}
+                tickFormatter={(v) => v + "%"}
+              />
+              <Tooltip content={<Tip />} />
+              <Legend content={<MarketLegend />} />
+              <Bar
+                dataKey="Main"
+                name="Main Market"
+                fill={C.main}
+                radius={[4, 4, 0, 0]}
+              />
+              <Bar
+                dataKey="ACE"
+                name="ACE Market"
+                fill={C.ace}
+                radius={[4, 4, 0, 0]}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#fef9f0",
+              border: "1px solid #fde68a",
+              borderRadius: 8,
+              padding: 12,
+            }}
+          >
+            <div
+              style={{
+                color: "#92400e",
+                fontWeight: 700,
+                fontSize: 11,
+                marginBottom: 5,
+              }}
+            >
+              Key Insight
+            </div>
+            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
+              ESG communication intensity is consistently higher in the Main
+              Market than in the ACE Market across all ESG pillars, indicating
+              systematic differences in disclosure practices between the two
+              listing segments.
+            </div>
+          </div>
+        </Card>
+      </div>
+
+      <div>
+        <Card>
+          <SecTitle
             title="ESG Communication by Sector Across Markets"
             sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
           />
-          <ResponsiveContainer width="100%" height={280}>
+          <ResponsiveContainer width="100%" height={400}>
             <BarChart
               data={secMktTable.map((d) => ({
                 sector: SHORT[d.sector] || d.sector,
@@ -1463,76 +1533,6 @@ function MarketTab() {
               While ACE Market firms show comparable levels in a few sectors,
               overall disclosure remains more consistently higher among Main
               Market firms.
-            </div>
-          </div>
-        </Card>
-      </div>
-
-      <div>
-        <Card>
-          <SecTitle
-            title="Pillar-Level Market Comparison (E → S → G)"
-            sub="Environmental, Social, Governance breakdown by listing segment"
-          />
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={pillarComp} barGap={8}>
-              <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="#f1f5f9"
-                vertical={false}
-              />
-              <XAxis
-                dataKey="pillar"
-                tick={{ fill: "#475569", fontSize: 10 }}
-                axisLine={false}
-                tickLine={false}
-              />
-              <YAxis
-                tick={{ fill: "#94a3b8", fontSize: 10 }}
-                axisLine={false}
-                tickLine={false}
-                tickFormatter={(v) => v + "%"}
-              />
-              <Tooltip content={<Tip />} />
-              <Legend content={<MarketLegend />} />
-              <Bar
-                dataKey="Main"
-                name="Main Market"
-                fill={C.main}
-                radius={[4, 4, 0, 0]}
-              />
-              <Bar
-                dataKey="ACE"
-                name="ACE Market"
-                fill={C.ace}
-                radius={[4, 4, 0, 0]}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-          <div
-            style={{
-              marginTop: 12,
-              background: "#fef9f0",
-              border: "1px solid #fde68a",
-              borderRadius: 8,
-              padding: 12,
-            }}
-          >
-            <div
-              style={{
-                color: "#92400e",
-                fontWeight: 700,
-                fontSize: 11,
-                marginBottom: 5,
-              }}
-            >
-              Key Insight
-            </div>
-            <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              ESG communication intensity is consistently higher in the Main
-              Market than in the ACE Market across all ESG pillars, indicating
-              systematic differences in disclosure practices between the two
-              listing segments.
             </div>
           </div>
         </Card>
