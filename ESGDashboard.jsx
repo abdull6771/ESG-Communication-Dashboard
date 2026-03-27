@@ -1245,10 +1245,25 @@ function MarketTab() {
   const mkt = AGG.mkt_data;
   const mktYr = EX.mkt_yr_trend;
   const sm = EX.sec_mkt_counts;
-  const secMkt = AGG.sec_mkt;
   const [visMkt, toggleMkt] = usePillarToggle();
   const main = mkt.find((m) => m.market === "MAIN");
   const ace = mkt.find((m) => m.market === "ACE");
+
+  // ESG Communication by Sector data from report
+  const secMktTable = [
+    { sector: "UTILITIES", MAIN: 32.5, ACE: 16.8 },
+    { sector: "ENERGY", MAIN: 31.2, ACE: 30.5 },
+    { sector: "HEALTHCARE", MAIN: 29.8, ACE: 22.5 },
+    { sector: "FINANCIAL SERVICES", MAIN: 29.5, ACE: 25.0 },
+    { sector: "PLANTATION", MAIN: 28.7, ACE: null },
+    { sector: "TELECOMMUNICATIONS AND MEDIA", MAIN: 26.8, ACE: 20.5 },
+    { sector: "TECHNOLOGY", MAIN: 26.5, ACE: 21.8 },
+    { sector: "TRANSPORTATION AND LOGISTICS", MAIN: 26.2, ACE: 24.8 },
+    { sector: "INDUSTRIAL PRODUCTS AND SERVICES", MAIN: 25.9, ACE: 23.5 },
+    { sector: "CONSUMER PRODUCTS AND SERVICES", MAIN: 25.4, ACE: 22.1 },
+    { sector: "PROPERTY", MAIN: 24.8, ACE: null },
+    { sector: "CONSTRUCTION", MAIN: 24.5, ACE: 23.2 },
+  ];
 
   const trendCompare = mktYr.map((d) => ({
     year: d.year,
@@ -1382,25 +1397,7 @@ function MarketTab() {
           />
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
-              data={(() => {
-                const order = [
-                  "UTILITIES",
-                  "ENERGY",
-                  "HEALTHCARE",
-                  "FINANCIAL SERVICES",
-                  "PLANTATION",
-                  "TELECOMMUNICATIONS AND MEDIA",
-                  "TECHNOLOGY",
-                  "TRANSPORTATION AND LOGISTICS",
-                  "INDUSTRIAL PRODUCTS AND SERVICES",
-                  "CONSUMER PRODUCTS AND SERVICES",
-                  "PROPERTY",
-                  "CONSTRUCTION",
-                ];
-                return [...secMkt].sort(
-                  (a, b) => order.indexOf(a.sector) - order.indexOf(b.sector),
-                );
-              })().map((d) => ({
+              data={secMktTable.map((d) => ({
                 sector: SHORT[d.sector] || d.sector,
                 "Main Market": d.MAIN,
                 "ACE Market": d.ACE,
