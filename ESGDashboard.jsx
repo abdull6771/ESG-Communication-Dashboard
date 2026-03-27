@@ -827,7 +827,7 @@ function OverviewTab() {
             title="Year-on-Year ESG Growth"
             sub="Percentage change vs prior year"
           />
-          <ResponsiveContainer width="100%" height={200}>
+          <ResponsiveContainer width="100%" height={140}>
             <BarChart data={growthData} barSize={50}>
               <CartesianGrid
                 strokeDasharray="3 3"
