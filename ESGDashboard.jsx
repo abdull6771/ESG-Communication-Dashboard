@@ -1380,9 +1380,10 @@ function MarketTab() {
         <div></div>
       </div>
 
-      <Card>
-        <SecTitle
-          title="ESG Communication by Sector Across Markets"
+      <div>
+        <Card>
+          <SecTitle
+            title="ESG Communication by Sector Across Markets"
           sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
         />
           <ResponsiveContainer width="100%" height={400}>
