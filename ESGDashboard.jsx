@@ -1307,9 +1307,7 @@ function MarketTab() {
 
       <div>
         <Card>
-          <SecTitle
-            title="Main vs ACE ESG Communication Trend (2022–2024)"
-          />
+          <SecTitle title="Main vs ACE ESG Communication Trend (2022–2024)" />
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={trendCompare}>
               <CartesianGrid
@@ -1459,14 +1457,13 @@ function MarketTab() {
         </Card>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
+      <div>
         <Card>
           <SecTitle
-            tag="Figure 4"
             title="Pillar-Level Market Comparison (E → S → G)"
             sub="Environmental, Social, Governance breakdown by listing segment"
           />
-          <ResponsiveContainer width="100%" height={180}>
+          <ResponsiveContainer width="100%" height={300}>
             <BarChart data={pillarComp} barGap={8}>
               <CartesianGrid
                 strokeDasharray="3 3"
@@ -1841,7 +1838,7 @@ function SectorsTab() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle
-            tag="Figure 6"
+            tag="Figure 5"
             title="Average ESG Communication by Sector (2022–2024)"
             sub="Sector ranking by mean ESG communication intensity"
           />
@@ -1908,7 +1905,7 @@ function SectorsTab() {
         </Card>
         <Card>
           <SecTitle
-            tag="Figure 7"
+            tag="Figure 6"
             title="Change in ESG Communication by Sector (2022–2024)"
             sub="Absolute improvement (pp) — Construction leads growth"
           />
@@ -2138,7 +2135,7 @@ function SectorsTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 8"
+          tag="Figure 7"
           title="Sector Positioning: ESG Communication Level (2024) vs Growth (2022–2024)"
           sub="Four quadrants — Leaders (high level + high growth), Mature, Catching-up, Laggards"
         />
@@ -2340,7 +2337,7 @@ function SectorsTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 10"
+          tag="Figure 9"
           title="Multi-Sector ESG Communication Trend (2022–2024)"
           sub="Year-on-year trajectory per sector"
         />
@@ -4345,7 +4342,7 @@ function GWTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 11"
+          tag="Figure 10"
           title="ESG Communication vs ESG Score"
           sub="Standardized scores — click a quadrant above to filter · Red diamonds = top quartile GW risk"
         />
