@@ -704,7 +704,6 @@ function OverviewTab() {
       <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: 18 }}>
         <Card>
           <SecTitle
-            tag="Figure 1"
             title="Average ESG Communication Intensity (2022–2024)"
             sub="Steady broad-based increase across 621 Shariah-listed firms"
           />
@@ -1838,7 +1837,6 @@ function SectorsTab() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle
-            tag="Figure 5"
             title="Average ESG Communication by Sector (2022–2024)"
             sub="Sector ranking by mean ESG communication intensity"
           />
@@ -1905,7 +1903,6 @@ function SectorsTab() {
         </Card>
         <Card>
           <SecTitle
-            tag="Figure 6"
             title="Change in ESG Communication by Sector (2022–2024)"
             sub="Absolute improvement (pp) — Construction leads growth"
           />
@@ -2135,7 +2132,6 @@ function SectorsTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 7"
           title="Sector Positioning: ESG Communication Level (2024) vs Growth (2022–2024)"
           sub="Four quadrants — Leaders (high level + high growth), Mature, Catching-up, Laggards"
         />
@@ -2337,7 +2333,6 @@ function SectorsTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 9"
           title="Multi-Sector ESG Communication Trend (2022–2024)"
           sub="Year-on-year trajectory per sector"
         />
@@ -4342,7 +4337,6 @@ function GWTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 10"
           title="ESG Communication vs ESG Score"
           sub="Standardized scores — click a quadrant above to filter · Red diamonds = top quartile GW risk"
         />
