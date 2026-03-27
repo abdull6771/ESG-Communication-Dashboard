@@ -1447,11 +1447,13 @@ function MarketTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> ESG communication intensity varies
-              significantly across sectors, with both Main Market and ACE Market
-              showing lower communication levels in Plantation, Financial
-              Services, and Property sectors, while Energy, Utilities, and
-              Healthcare demonstrate higher engagement across both markets.
+              <strong>Key Insight:</strong> ESG communication intensity is
+              consistently higher in the Main Market than in the ACE Market
+              across most sectors. The gap is particularly pronounced in sectors
+              such as Utilities, Telecommunications & Media, and Technology.
+              While ACE Market firms show comparable levels in a few sectors,
+              overall disclosure remains more consistently higher among Main
+              Market firms.
             </div>
           </div>
         </Card>
