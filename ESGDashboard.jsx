@@ -924,11 +924,9 @@ function OverviewTab() {
           >
             <span style={{ fontSize: 14 }}>💡</span>
             <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> The data confirms a broad-based
-              shift in disclosure behavior over the observation period,
-              indicating that the sustained upward trajectory in ESG
-              communication is shared across the broader market as practices
-              broadly institutionalize.
+              <strong>Key Insight:</strong> ESG communication growth remains
+              strong across the observation period, reflecting a sustained and
+              broad-based increase in disclosure practices among firms.
             </div>
           </div>
         </Card>
@@ -992,11 +990,10 @@ function OverviewTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            <b>All three pillars are advancing simultaneously,</b> but they do
-            so from differentiated starting points. Governance anchors the
-            highest baseline, while Environmental communication shows the
-            strongest proportional acceleration — reflecting rising corporate
-            attention to climate and climate-related disclosure obligations.
+            All three ESG pillars increase steadily over the period, with
+            Governance remaining the dominant component, Environmental
+            communication showing the fastest growth, and Social communication
+            rising progressively.
           </div>
         </div>
       </Card>
@@ -1249,6 +1246,7 @@ function MarketTab() {
   const mkt = AGG.mkt_data;
   const mktYr = EX.mkt_yr_trend;
   const sm = EX.sec_mkt_counts;
+  const secMkt = AGG.sec_mkt;
   const [visMkt, toggleMkt] = usePillarToggle();
   const main = mkt.find((m) => m.market === "MAIN");
   const ace = mkt.find((m) => m.market === "ACE");
@@ -1378,9 +1376,89 @@ function MarketTab() {
             </div>
           </div>
         </Card>
+
         <Card>
           <SecTitle
             tag="Figure 5"
+            title="ESG Communication by Sector Across Markets"
+            sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
+          />
+          <ResponsiveContainer width="100%" height={400}>
+            <BarChart
+              data={secMkt.map((d) => ({
+                sector: SHORT[d.sector] || d.sector,
+                "Main Market": d.MAIN,
+                "ACE Market": d.ACE,
+              }))}
+              layout="vertical"
+              margin={{ left: 120, right: 20 }}
+            >
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#f1f5f9"
+                horizontal={true}
+              />
+              <XAxis type="number" tick={{ fill: "#94a3b8", fontSize: 10 }} />
+              <YAxis
+                dataKey="sector"
+                width={110}
+                tick={{ fill: "#475569", fontSize: 10 }}
+                type="category"
+              />
+              <Tooltip
+                content={({ active, payload, label }) => {
+                  if (!active || !payload?.length) return null;
+                  return (
+                    <div
+                      style={{
+                        background: "#1e3a5f",
+                        borderRadius: 8,
+                        padding: "9px 13px",
+                      }}
+                    >
+                      <div style={{ color: "#94a3b8", fontSize: 10 }}>
+                        {label}
+                      </div>
+                      {payload.map((p, i) => (
+                        <div key={i} style={{ color: p.fill, fontWeight: 700 }}>
+                          {p.name}: {fmt(p.value, 2)}%
+                        </div>
+                      ))}
+                    </div>
+                  );
+                }}
+              />
+              <Legend wrapperStyle={{ paddingTop: 14 }} iconType="square" />
+              <Bar dataKey="Main Market" fill={C.main} barSize={20} />
+              <Bar dataKey="ACE Market" fill={C.ace} barSize={20} />
+            </BarChart>
+          </ResponsiveContainer>
+          <div
+            style={{
+              marginTop: 12,
+              background: "#f0fdf9",
+              border: "1px solid #99f6e4",
+              borderRadius: 8,
+              padding: "10px 14px",
+              display: "flex",
+              gap: 8,
+              alignItems: "flex-start",
+            }}
+          >
+            <span style={{ fontSize: 14 }}>💡</span>
+            <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
+              <strong>Key Insight:</strong> ESG communication intensity varies
+              significantly across sectors, with both Main Market and ACE Market
+              showing lower communication levels in Plantation, Financial
+              Services, and Property sectors, while Energy, Utilities, and
+              Healthcare demonstrate higher engagement across both markets.
+            </div>
+          </div>
+        </Card>
+
+        <Card>
+          <SecTitle
+            tag="Figure 6"
             title="Pillar-Level Market Comparison (E → S → G)"
             sub="Environmental, Social, Governance breakdown by listing segment"
           />
@@ -1705,13 +1783,11 @@ function MarketTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-            ESG communication intensity is consistently higher in the Main
-            Market than in the ACE Market across most sectors, with more uniform
-            disclosure patterns among Main Market firms. In contrast, ACE Market
-            firms exhibit more uneven ESG communication, with sectors such as
-            Financial Services, Plantation, and Property showing relatively
-            lower intensity, while sectors like Energy and Utilities maintain
-            relatively higher levels.
+            Main Market firms account for the majority of the sample across all
+            sectors, with particularly strong representation in Industrial,
+            Consumer, and Property sectors. In contrast, ACE Market firms
+            constitute a smaller share across sectors, reflecting their more
+            limited presence within the overall sample.
           </div>
         </div>
       </Card>
@@ -1761,7 +1837,7 @@ function SectorsTab() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle
-            tag="Figure 6"
+            tag="Figure 7"
             title="Average ESG Communication by Sector (2022–2024)"
             sub="Sector ranking by mean ESG communication intensity"
           />
@@ -1828,7 +1904,7 @@ function SectorsTab() {
         </Card>
         <Card>
           <SecTitle
-            tag="Figure 7"
+            tag="Figure 8"
             title="Change in ESG Communication by Sector (2022–2024)"
             sub="Absolute improvement (pp) — Construction leads growth"
           />
@@ -2058,7 +2134,7 @@ function SectorsTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 8"
+          tag="Figure 9"
           title="Sector Positioning: ESG Communication Level (2024) vs Growth (2022–2024)"
           sub="Four quadrants — Leaders (high level + high growth), Mature, Catching-up, Laggards"
         />
@@ -2260,7 +2336,7 @@ function SectorsTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 9"
+          tag="Figure 10"
           title="Multi-Sector ESG Communication Trend (2022–2024)"
           sub="Year-on-year trajectory per sector"
         />
@@ -4135,8 +4211,14 @@ function StatsTab() {
             Key Insight
           </div>
           <div style={{ color: "#78350f", fontSize: 11, lineHeight: 1.6 }}>
-              Overall ESG communication is positively and significantly associated with ESG scores (β = 0.194, p &lt; 0.01). A 10-point increase in ESG communication intensity is associated with approximately a 2-point increase in ESG score. The association is strongest for Environmental (β = 0.491, p &lt; 0.01) and Social (β = 0.397, p &lt; 0.01) communication. In contrast, Governance communication does not exhibit a statistically significant association, which may reflect its relatively lower variation and more stable pattern over time.
-
+            Overall ESG communication is positively and significantly associated
+            with ESG scores (β = 0.194, p &lt; 0.01). A 10-point increase in ESG
+            communication intensity is associated with approximately a 2-point
+            increase in ESG score. The association is strongest for
+            Environmental (β = 0.491, p &lt; 0.01) and Social (β = 0.397, p &lt;
+            0.01) communication. In contrast, Governance communication does not
+            exhibit a statistically significant association, which may reflect
+            its relatively lower variation and more stable pattern over time.
           </div>
         </div>
       </Card>
@@ -4259,7 +4341,7 @@ function GWTab() {
 
       <Card>
         <SecTitle
-          tag="Figure 10"
+          tag="Figure 11"
           title="ESG Communication vs ESG Score"
           sub="Standardized scores — click a quadrant above to filter · Red diamonds = top quartile GW risk"
         />
@@ -4504,8 +4586,11 @@ function GWTab() {
         >
           <span style={{ fontSize: 14 }}>💡</span>
           <div style={{ fontSize: 11, color: "#0f5c4e", lineHeight: 1.5 }}>
-              <strong>Key Insight:</strong> While ESG communication and ESG performance are positively related, alignment is not uniform. Substantial heterogeneity exists, with a subset of firms showing higher communication levels relative to their ESG performance scores.
-
+            <strong>Key Insight:</strong> While ESG communication and ESG
+            performance are positively related, alignment is not uniform.
+            Substantial heterogeneity exists, with a subset of firms showing
+            higher communication levels relative to their ESG performance
+            scores.
           </div>
         </div>
       </Card>
