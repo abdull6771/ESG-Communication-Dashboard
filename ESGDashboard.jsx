@@ -1382,7 +1382,25 @@ function MarketTab() {
           />
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
-              data={secMkt.map((d) => ({
+              data={(() => {
+                const order = [
+                  "UTILITIES",
+                  "ENERGY",
+                  "HEALTHCARE",
+                  "FINANCIAL SERVICES",
+                  "PLANTATION",
+                  "TELECOMMUNICATIONS AND MEDIA",
+                  "TECHNOLOGY",
+                  "TRANSPORTATION AND LOGISTICS",
+                  "INDUSTRIAL PRODUCTS AND SERVICES",
+                  "CONSUMER PRODUCTS AND SERVICES",
+                  "PROPERTY",
+                  "CONSTRUCTION",
+                ];
+                return [...secMkt].sort(
+                  (a, b) => order.indexOf(a.sector) - order.indexOf(b.sector),
+                );
+              })().map((d) => ({
                 sector: SHORT[d.sector] || d.sector,
                 "Main Market": d.MAIN,
                 "ACE Market": d.ACE,
