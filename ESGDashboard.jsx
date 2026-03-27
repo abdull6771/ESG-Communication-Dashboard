@@ -1377,12 +1377,14 @@ function MarketTab() {
           </div>
         </Card>
 
-        <Card>
-          <SecTitle
-            tag="Figure 5"
-            title="ESG Communication by Sector Across Markets"
-            sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
-          />
+        <div></div>
+      </div>
+
+      <Card>
+        <SecTitle
+          title="ESG Communication by Sector Across Markets"
+          sub="Average ESG communication intensity — Main Market vs ACE Market by sector"
+        />
           <ResponsiveContainer width="100%" height={400}>
             <BarChart
               data={secMkt.map((d) => ({
@@ -1457,10 +1459,12 @@ function MarketTab() {
             </div>
           </div>
         </Card>
+      </div>
 
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 18 }}>
         <Card>
           <SecTitle
-            tag="Figure 6"
+            tag="Figure 5"
             title="Pillar-Level Market Comparison (E → S → G)"
             sub="Environmental, Social, Governance breakdown by listing segment"
           />
